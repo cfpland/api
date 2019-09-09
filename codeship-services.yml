@@ -1,0 +1,12 @@
+version: "3.5"
+services:
+  api:
+    build: .
+    encrypted_env_file: ./.env.encrypted
+    depends_on:
+      - database
+  database:
+    image: postgres:10
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=local

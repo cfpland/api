@@ -1,0 +1,25 @@
+version: "3"
+services:
+  api:
+    build: .
+    restart: always
+    ports:
+    - "3000:3000"
+    env_file:
+    - ./.env
+    volumes:
+    - ./src:/usr/src/app/src
+    - ./test:/usr/src/app/test
+    command: npm run start:dev
+  database:
+    image: postgres:10
+    restart: always
+    volumes:
+      - db:/var/lib/postgresql/data
+    ports:
+      - 54320:5432
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=local
+volumes:
+  db:

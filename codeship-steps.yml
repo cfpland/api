@@ -1,0 +1,8 @@
+- type: parallel
+  steps:
+    # Run the linter
+    - service: api
+      command: npm run lint
+    # Run the e2e tests
+    - service: api
+      command: npm run test:e2e

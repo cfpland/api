@@ -1,0 +1,16 @@
+<!-- Sponsor -->
+<mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
+  <mj-column>
+    <mj-text font-weight="bold">
+      ❤️
+      <a href="https://sponsor.cfpland.com/">Help Support CFP Land</a>
+      ❤️
+    </mj-text>
+    <mj-text color="#666666" font-size="14px" line-height="20px">
+      CFP Land helps over 1000 conference speakers like you find new opportunities to
+      speak via the weekly newsletter. If your employer would like to support this effort,
+      here's your chance!
+    </mj-text>
+    <mj-text><a href="https://sponsor.cfpland.com/">Sponsor CFP Land →</a></mj-text>
+  </mj-column>
+</mj-section>

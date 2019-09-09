@@ -1,0 +1,69 @@
+import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { UserService } from './users/services/user.service';
+import { MoonclerkApiClientService } from './users/clients/moonclerk-api-client.service';
+import { User } from './users/entities/user.entity';
+import { UserConference } from './user-conferences/entities/user-conference.entity';
+import { SubscribersService } from './subscribers/subscribers.service';
+import { subscribersClientProvider } from './providers/subscribers-client-provider';
+import { SearchService } from './searches/services/search.service';
+import { Search } from './searches/entities/search.entity';
+import { PostsService } from './posts/posts.service';
+import { RssParserPostsClientService } from './posts/clients/rss-parser-posts-client.service';
+import { ConferencesService } from './conferences/services/conferences.service';
+import { AirtableConferencesClientService } from './conferences/clients/airtable-conferences-client.service';
+import { ExternalConferencesService } from './conferences/services/external-conferences.service';
+import { CallingAllPapersClientService } from './conferences/clients/calling-all-papers-client.service';
+import { CfpTimeClientService } from './conferences/clients/cfp-time-client.service';
+import { ConfstechClientService } from './conferences/clients/confstech-client.service';
+import { MicrolinkClient } from './conference-enhancements/clients/microlink-client.service';
+import { ConferenceEnhancementsService } from './conference-enhancements/conference-enhancements.service';
+import { LocationsService } from './locations/locations.service';
+import { GeonamesClientService } from './locations/clients/geonames-client.service';
+import { RestcountriesClientService } from './locations/clients/restcountries-client.service';
+import { UserConferencesService } from './user-conferences/user-conferences.service';
+
+@Module({
+  imports: [
+    TypeOrmModule.forRoot({
+      type: 'postgres',
+      url: process.env.DATABASE_URL,
+      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      synchronize: process.env.ENVIRONMENT === 'develop',
+      keepConnectionAlive: true,
+    }),
+    TypeOrmModule.forFeature([User, UserConference, Search]),
+  ],
+  providers: [
+    AirtableConferencesClientService,
+    CallingAllPapersClientService,
+    CfpTimeClientService,
+    ConferenceEnhancementsService,
+    ConferencesService,
+    ConfstechClientService,
+    ExternalConferencesService,
+    GeonamesClientService,
+    LocationsService,
+    MicrolinkClient,
+    MoonclerkApiClientService,
+    PostsService,
+    RestcountriesClientService,
+    RssParserPostsClientService,
+    SearchService,
+    subscribersClientProvider,
+    SubscribersService,
+    UserConferencesService,
+    UserService,
+  ],
+  exports: [
+    ConferencesService,
+    ConferenceEnhancementsService,
+    LocationsService,
+    PostsService,
+    SearchService,
+    SubscribersService,
+    UserConferencesService,
+    UserService,
+  ],
+})
+export class DataAccessModule {}

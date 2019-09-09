@@ -1,0 +1,14 @@
+import { NestFactory } from '@nestjs/core';
+import { AppModule } from '../../app.module';
+import { Logger } from '@nestjs/common';
+import { NotificationsController } from '../controllers/notifications.controller';
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+
+  Logger.log('User Summary Sending Started');
+  const result = await app.get(NotificationsController).sendUserSummary();
+
+  Logger.log(result);
+}
+bootstrap();

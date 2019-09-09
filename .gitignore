@@ -1,0 +1,8 @@
+dist/
+node_modules/
+.secrets
+.DS_Store
+*.env
+.env
+codeship.aes
+dockercfg

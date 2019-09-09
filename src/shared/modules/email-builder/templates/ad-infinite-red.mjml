@@ -1,0 +1,19 @@
+<!-- Sponsor -->
+<mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
+  <mj-column width="28%">
+    <mj-image align="center" href="https://infinite.red/ChainReactConf" src="https://i.imgur.com/Qy0lg4g.png"></mj-image>
+    <mj-text align="center" font-size="12px">Enjoy your way to React Native Development!</mj-text>
+  </mj-column>
+  <mj-column width="72%">
+    <mj-text font-weight="bold">
+      <a href="https://infinite.red/ChainReactConf">The US React Native Conference - Go Mobile!</a>
+    </mj-text>
+    <mj-text color="#666666" font-size="14px" line-height="20px">
+      You're ready to build mobile apps. React is ever growing, and React Native is jumping on every platform: Android, iOS, Xbox, OSX. See speakers from, Google, Amazon, and Facebook. Build the future and make friends by attending Chain React, the US React Native Conference.
+    </mj-text>
+    <mj-text>
+      <a href="https://infinite.red/ChainReactConf">Attend on July 11-12, 2019 →</a>
+    </mj-text>
+    <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
+  </mj-column>
+</mj-section>

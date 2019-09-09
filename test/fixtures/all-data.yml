@@ -1,0 +1,73 @@
+fixtures:
+  - User:
+      id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
+      email: jimmy@example.com
+      auth0UserId: github|1103622
+      firstName: Jimmy
+      lastName: McNulty
+      twitter:
+      website:
+      createdAt: 2019-06-10 14:32:07.000000
+      updatedAt: 2019-06-10 14:32:07.000000
+      speakingGoal: Get a keynote speaking slot
+      location: Baltimore, MD
+      communicationPreferences: {"savedConferences":true,"savedSearches":true,"weeklySummary":true}
+      accountLevel: pro
+  - User:
+      id: 4606dd6c-4fc9-447d-b673-823fae9f9027
+      email: stringer@example.com
+      auth0UserId: auth0|7890123
+      firstName: Stringer
+      lastName: Bell
+      twitter:
+      website:
+      createdAt: 2019-06-10 14:32:07.000000
+      updatedAt: 2019-06-10 14:32:07.000000
+      speakingGoal: Speak at my first conference
+      location: Baltimore, MD
+      communicationPreferences: {"savedConferences":true,"savedSearches":true,"weeklySummary":true}
+      accountLevel: new
+  - UserConference:
+      atConferenceId: reco2ByjULOGa5LJM
+      action: saved
+      user:
+          id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
+      createdAt: 2019-06-10 14:32:07.000000
+  - UserConference:
+      atConferenceId: reco2ByjULOGa5LJM
+      action: saved
+      user:
+          id: 4606dd6c-4fc9-447d-b673-823fae9f9027
+      createdAt: 2019-06-10 14:32:07.000000
+  - UserConference:
+      atConferenceId: rechPa2MFAvuhxHBC
+      action: saved
+      user:
+          id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
+      createdAt: 2019-06-10 14:32:07.000000
+  - UserConference:
+      atConferenceId: recCU0WehEJrKwrF8
+      action: tracked
+      meta: {"trackingStatus":"applied"}
+      createdAt: 2019-06-10 14:32:07.000000
+      user:
+          id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
+  - UserConference:
+      atConferenceId: rec9lyc8TdxpI56Yn
+      action: tracked
+      meta: {"trackingStatus":"accepted"}
+      user:
+          id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
+      createdAt: 2019-06-10 14:32:07.000000
+  - UserConference:
+      atConferenceId: reclFaPogy8O4IGBm
+      action: tracked
+      meta: {"trackingStatus":"rejected"}
+      user:
+          id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
+      createdAt: 2019-06-10 14:32:07.000000
+  - Search:
+      options: {"category":"php"}
+      user:
+          id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
+      createdAt: 2019-06-10 14:32:07.000000
