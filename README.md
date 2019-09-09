@@ -1,4 +1,4 @@
-# CFP Land
+# CFP Land API
 
 This project contains the CFP Land API, mailer, and collector. It can be run locally with Docker and deployed to Heroku.
 
@@ -23,3 +23,7 @@ This project contains the CFP Land API, mailer, and collector. It can be run loc
 ## Deploying
 
 This project deploys automatically using Heroku.
+
+## License
+
+This project uses the MIT License. See the `LICENSE` file for details.
