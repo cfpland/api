@@ -6,7 +6,7 @@ This project contains the CFP Land API, mailer, and collector. It can be run loc
 
 ### Starting the API and Database
 
-- Build the Docker image: `docker build -t karllhughes/cfpland .`
+- Build the Docker image: `docker-compose build`
 - Run the API and DB containers: `docker-composer up`
 
 ### Running NPM commands
@@ -18,7 +18,7 @@ This project contains the CFP Land API, mailer, and collector. It can be run loc
 - Run e2e tests locally (when containers are running): `docker exec -it api_api_1 npm run test:e2e`
   - Run a single e2e test: `docker exec -it api_api_1 npm run test:e2e -- user-conferences.e2e-spec.ts`
 - Run prettier to fix linting issues: `npm run format`
-- Run liter: `npm run lint`
+- Run linter: `npm run lint`
 
 ## Deploying
 

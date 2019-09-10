@@ -1,7 +1,6 @@
-export type UserConferenceAction = 'saved' | 'hidden' | 'tracked';
+export type UserConferenceAction = 'saved' | 'tracked';
 
 export const userConferenceActionsArray: UserConferenceAction[] = [
   'saved',
-  'hidden',
   'tracked',
 ];

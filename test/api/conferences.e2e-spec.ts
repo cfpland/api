@@ -65,7 +65,7 @@ describe('Conferences (/v0/conferences)', () => {
         it('can GET all by airtable ID', async () => {
             const airtableId = 'recU9Hdfi0wh40qbc';
             const response = await request(app.getHttpServer())
-            .get(`/v0/conferences?atIds[]=${airtableId}`)
+            .get(`/v0/conferences?atView=all_with_closed&atIds[]=${airtableId}`)
             .set('Authorization', `Bearer ${faker.random.alphaNumeric(12)}`)
             .expect(200)
             .expect('Content-Type', /json/);
