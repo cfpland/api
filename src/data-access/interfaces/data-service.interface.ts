@@ -1,7 +1,7 @@
 import { Options } from './options.interface';
 import { Collection } from './collection.interface';
 import { Observable } from 'rxjs';
-import { DeleteResult } from 'typeorm';
+import { DeleteResult, UpdateResult } from 'typeorm';
 
 export interface CreateDataService<T> {
   createOne(toCreate: Partial<T>): Observable<T>;
@@ -26,7 +26,7 @@ export interface GetOneDataService<T> {
 }
 
 export interface UpdateDataService<T> {
-  updateOneById(id: string, toUpdate: Partial<T>): Observable<T>;
+  updateOneById(id: string, toUpdate: Partial<T>): Observable<UpdateResult>;
 }
 
 export interface DataService<T>
