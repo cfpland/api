@@ -10,6 +10,7 @@ import { ConferenceDatesInterceptor } from './interceptors/conference-dates.inte
 import { DataAccessModule } from '../data-access/data-access.module';
 import { SearchesController } from './controllers/searches.controller';
 import { UserConferencesController } from './controllers/user-conferences.controller';
+import { AbstractsController } from './controllers/abstracts.controller';
 
 @Module({
   controllers: [
@@ -17,6 +18,7 @@ import { UserConferencesController } from './controllers/user-conferences.contro
     UsersController,
     SearchesController,
     UserConferencesController,
+    AbstractsController,
   ],
   imports: [
     CacheModule.register({

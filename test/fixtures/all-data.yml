@@ -71,3 +71,23 @@ fixtures:
       user:
           id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
       createdAt: 2019-06-10 14:32:07.000000
+  - AbstractEntity:
+      title: My Favorite Abstract
+      description: "This is a longer description of the abstract itself."
+      user:
+          id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
+      createdAt: 2019-06-10 14:32:07.000000
+  - AbstractEntity:
+      title: My Next Abstract
+      description: "This is a longer description of the abstract itself."
+      other: "More stuff like links, videos, and previous talks."
+      user:
+          id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
+      createdAt: 2019-06-10 14:32:07.000000
+  - AbstractEntity:
+      title: Another User's Abstract
+      description: "This is a longer description of the abstract itself."
+      other: "More stuff like links, videos, and previous talks."
+      user:
+          id: 4606dd6c-4fc9-447d-b673-823fae9f9027
+      createdAt: 2019-06-10 14:32:07.000000

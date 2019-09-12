@@ -11,6 +11,7 @@ import { UserConference } from '../../user-conferences/entities/user-conference.
 import { Search } from '../../searches/entities/search.entity';
 import * as md5 from 'md5';
 import { UserCommunicationPreferencesDto } from '../validation/user-communication-preferences.dto';
+import { AbstractEntity } from '../../abstracts/abstract.entity';
 
 @Entity()
 export class User {
@@ -94,6 +95,9 @@ export class User {
 
   @OneToMany(type => Search, search => search.user)
   searches: Search[];
+
+  @OneToMany(type => AbstractEntity, abstractEntity => abstractEntity.user)
+  abstracts: AbstractEntity[];
 
   protected profileUrl: string;
 
