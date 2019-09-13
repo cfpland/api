@@ -12,6 +12,7 @@ import { Search } from '../../searches/entities/search.entity';
 import * as md5 from 'md5';
 import { UserCommunicationPreferencesDto } from '../validation/user-communication-preferences.dto';
 import { AbstractEntity } from '../../abstracts/abstract.entity';
+import { TrackedConference } from '../../tracked-conferences/tracked-conference.entity';
 
 @Entity()
 export class User {
@@ -92,6 +93,9 @@ export class User {
 
   @OneToMany(type => UserConference, userConference => userConference.user)
   userConferences: UserConference[];
+
+  @OneToMany(type => TrackedConference, trackedConference => trackedConference.user)
+  trackedConferences: UserConference[];
 
   @OneToMany(type => Search, search => search.user)
   searches: Search[];

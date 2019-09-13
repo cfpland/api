@@ -2,7 +2,7 @@ import { IsIn, IsOptional, IsString } from 'class-validator';
 import {
   TrackingStatus,
   trackingStatusArray,
-} from '../types/tracking-status.type';
+} from '../../tracked-conferences/types/tracking-status.type';
 
 export class UserConferenceMetaDto {
   @IsOptional()
