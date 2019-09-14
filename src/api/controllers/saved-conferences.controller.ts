@@ -5,7 +5,7 @@ import {
   UseGuards,
   Param,
   Delete,
-  Put,
+  Put, HttpCode,
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { Observable } from 'rxjs';
@@ -34,7 +34,7 @@ export class SavedConferencesController {
     @Req() request: RequestWithUser,
     @Param() params: CreateUserConferenceParamDto,
   ): Observable<UserConference> {
-    return this.service.createOne({
+    return this.service.createOrUpdateOne({
       ...params,
       user: request.user,
     });
@@ -42,6 +42,7 @@ export class SavedConferencesController {
 
   @Delete(':atConferenceId')
   @UseGuards(AuthGuard('bearer'))
+  @HttpCode(204)
   public deleteMeConference(
     @Req() request: RequestWithUser,
     @Param() params: CreateUserConferenceParamDto,

@@ -10,7 +10,6 @@ import {
 } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import {
-  CreateDataService,
   DeleteAllDataService,
   GetAllDataService,
 } from '../interfaces/data-service.interface';
@@ -23,7 +22,6 @@ import { GetAllUserConferencesOptions } from './interfaces/get-all-user-conferen
 export class UserConferencesService
   implements
     GetAllDataService<UserConference>,
-    CreateDataService<UserConference>,
     DeleteAllDataService<UserConference> {
   constructor(
     @InjectRepository(UserConference)
@@ -40,7 +38,7 @@ export class UserConferencesService
     ).pipe(map(userConferences => collect(userConferences)));
   }
 
-  public createOne(
+  public createOrUpdateOne(
     toCreate: Partial<UserConference>,
   ): Observable<UserConference> {
     const userConference = this.userConferencesRepository.create(toCreate);

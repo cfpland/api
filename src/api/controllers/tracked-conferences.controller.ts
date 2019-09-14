@@ -6,7 +6,7 @@ import {
   UseGuards,
   Param,
   Delete,
-  Put,
+  Put, HttpCode,
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { Observable } from 'rxjs';
@@ -30,22 +30,23 @@ export class TrackedConferencesController {
     return this.service.getAll({ userId: request.user.id });
   }
 
-  @Put(':atConferenceId/:status')
+  @Put(':atConferenceId')
   @UseGuards(AuthGuard('bearer'))
   public putMeConference(
     @Req() request: RequestWithUser,
     @Param() params: CreateTrackedConferenceParamDto,
     @Body() body: CreateTrackedConferenceBodyDto,
   ): Observable<UserConference> {
-    return this.service.createOne({
+    return this.service.createOrUpdateOne({
       ...params,
       ...body,
       user: request.user,
     });
   }
 
-  @Delete(':atConferenceId/:status')
+  @Delete(':atConferenceId')
   @UseGuards(AuthGuard('bearer'))
+  @HttpCode(204)
   public deleteMeConference(
     @Req() request: RequestWithUser,
     @Param() params: CreateTrackedConferenceParamDto,
