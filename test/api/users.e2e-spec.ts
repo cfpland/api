@@ -8,8 +8,9 @@ import { Connection } from 'typeorm';
 
 describe('Users (/v0/me)', () => {
     let app;
+    const testUserId = 'e34b5cf4-458b-45ec-a413-8c462f2ef09c';
     const mockAuthService = {
-        verify: () => Promise.resolve({id: 'e34b5cf4-458b-45ec-a413-8c462f2ef09c'}),
+        verify: () => Promise.resolve({id: testUserId}),
     };
 
     beforeAll(async () => {
@@ -27,15 +28,15 @@ describe('Users (/v0/me)', () => {
         await app.init();
     });
 
-    it('can GET their conferences', async () => {
+    it('can GET their account', async () => {
         const response = await request(app.getHttpServer())
-        .get('/v0/me/conferences')
+        .get('/v0/me')
         .set('Authorization', `Bearer ${faker.random.alphaNumeric(12)}`)
         .expect(200)
         .expect('Content-Type', /json/);
 
         expect(response.body).not.toBeNull();
-        expect(response.body.total).toEqual(5);
+        expect(response.body.id).toEqual(testUserId);
     });
 
     afterAll(async () => {

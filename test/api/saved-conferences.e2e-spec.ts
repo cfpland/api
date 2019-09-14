@@ -6,7 +6,7 @@ import * as faker from 'faker';
 import { loadFixtures } from '../helpers/load-fixtures.function';
 import { Connection } from 'typeorm';
 
-describe('UserConferences (/v0/me/conferences)', () => {
+describe('SavedConferences (/v0/me/saved-conferences)', () => {
     let app;
     let savedFixtures;
     const testUserId = 'e34b5cf4-458b-45ec-a413-8c462f2ef09c';
@@ -29,59 +29,41 @@ describe('UserConferences (/v0/me/conferences)', () => {
         await app.init();
     });
 
-    it('can GET their user-conferences', async () => {
+    it('can GET their saved-conferences', async () => {
         const response = await request(app.getHttpServer())
-        .get('/v0/me/conferences')
+        .get('/v0/me/saved-conferences')
         .set('Authorization', `Bearer ${faker.random.alphaNumeric(12)}`)
         .expect(200)
         .expect('Content-Type', /json/);
 
         expect(response.body).not.toBeNull();
-        expect(response.body.total).toEqual(5);
+        expect(response.body.total).toEqual(2);
     });
 
-    it('can PUT hide user-conference', async () => {
+    it('can PUT saved-conferences', async () => {
         const airtableId = 'recU9Hdfi0wh40qbc';
-        const action = 'hide';
         const response = await request(app.getHttpServer())
-        .put(`/v0/me/conferences/${airtableId}/${action}`)
+        .put(`/v0/me/saved-conferences/${airtableId}`)
         .set('Authorization', `Bearer ${faker.random.alphaNumeric(12)}`)
         .expect(200)
         .expect('Content-Type', /json/);
 
         expect(response.body).not.toBeNull();
         expect(response.body.atConferenceId).toEqual(airtableId);
-        expect(response.body.action).toEqual(action);
     });
 
-    it('can PUT save user-conference', async () => {
-        const airtableId = 'recU9Hdfi0wh40qbc';
-        const action = 'save';
-        const response = await request(app.getHttpServer())
-        .put(`/v0/me/conferences/${airtableId}/${action}`)
-        .set('Authorization', `Bearer ${faker.random.alphaNumeric(12)}`)
-        .expect(200)
-        .expect('Content-Type', /json/);
-
-        expect(response.body).not.toBeNull();
-        expect(response.body.atConferenceId).toEqual(airtableId);
-        expect(response.body.action).toEqual(action);
-    });
-
-    it('can DELETE user-conference', async () => {
+    it('can DELETE saved-conferences', async () => {
         const userConference = savedFixtures.find(fixture =>
             fixture.UserConference !== undefined &&
             fixture.UserConference.user.id === testUserId,
         );
 
         const response = await request(app.getHttpServer())
-        .del(`/v0/me/conferences/${userConference.UserConference.atConferenceId}/${userConference.UserConference.action}`)
+        .del(`/v0/me/saved-conferences/${userConference.UserConference.atConferenceId}`)
         .set('Authorization', `Bearer ${faker.random.alphaNumeric(12)}`)
-        .expect(200)
-        .expect('Content-Type', /json/);
+        .expect(204);
 
         expect(response.body).not.toBeNull();
-        expect(response.body.affected).toEqual(1);
     });
 
     afterAll(async () => {
