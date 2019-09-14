@@ -92,7 +92,7 @@ export class User {
   }
 
   @OneToMany(type => UserConference, userConference => userConference.user)
-  userConferences: UserConference[];
+  savedConferences: UserConference[];
 
   @OneToMany(type => TrackedConference, trackedConference => trackedConference.user)
   trackedConferences: TrackedConference[];
