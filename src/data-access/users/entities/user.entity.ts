@@ -95,7 +95,7 @@ export class User {
   userConferences: UserConference[];
 
   @OneToMany(type => TrackedConference, trackedConference => trackedConference.user)
-  trackedConferences: UserConference[];
+  trackedConferences: TrackedConference[];
 
   @OneToMany(type => Search, search => search.user)
   searches: Search[];

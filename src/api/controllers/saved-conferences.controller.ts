@@ -1,5 +1,4 @@
 import {
-  Body,
   Controller,
   Get,
   Req,
@@ -13,44 +12,41 @@ import { Observable } from 'rxjs';
 import { RequestWithUser } from '../../shared/types/request-with-user.type';
 import { UserConference } from '../../data-access/user-conferences/entities/user-conference.entity';
 import { CreateUserConferenceParamDto } from '../../data-access/user-conferences/validation/create-user-conference-param.dto';
-import { CreateUserConferenceBodyDto } from '../../data-access/user-conferences/validation/create-user-conference-body.dto';
 import { Collection } from '../../data-access/interfaces/collection.interface';
 import { UserConferencesService } from '../../data-access/user-conferences/user-conferences.service';
 import { DeleteResult } from 'typeorm';
 
-@Controller('v0/me/conferences')
-export class UserConferencesController {
-  constructor(private userConferencesService: UserConferencesService) {}
+@Controller('v0/me/saved-conferences')
+export class SavedConferencesController {
+  constructor(private service: UserConferencesService) {}
 
   @Get()
   @UseGuards(AuthGuard('bearer'))
   public getMeConferences(
     @Req() request: RequestWithUser,
   ): Observable<Collection<UserConference>> {
-    return this.userConferencesService.getAll({ userId: request.user.id });
+    return this.service.getAll({ userId: request.user.id });
   }
 
-  @Put(':atConferenceId/:action')
+  @Put(':atConferenceId')
   @UseGuards(AuthGuard('bearer'))
   public putMeConference(
     @Req() request: RequestWithUser,
     @Param() params: CreateUserConferenceParamDto,
-    @Body() body: CreateUserConferenceBodyDto,
   ): Observable<UserConference> {
-    return this.userConferencesService.createOne({
+    return this.service.createOne({
       ...params,
-      ...body,
       user: request.user,
     });
   }
 
-  @Delete(':atConferenceId/:action')
+  @Delete(':atConferenceId')
   @UseGuards(AuthGuard('bearer'))
   public deleteMeConference(
     @Req() request: RequestWithUser,
     @Param() params: CreateUserConferenceParamDto,
   ): Observable<DeleteResult> {
-    return this.userConferencesService.deleteAll({
+    return this.service.deleteAll({
       ...params,
       userId: request.user.id,
     });

@@ -1,15 +1,7 @@
-import { IsIn, IsNotEmpty, IsString } from 'class-validator';
-import {
-  UserConferenceAction,
-  userConferenceActionsArray,
-} from '../types/user-conference-action.type';
+import { IsNotEmpty, IsString } from 'class-validator';
 
 export class CreateUserConferenceParamDto {
   @IsNotEmpty()
   @IsString()
   public atConferenceId: string;
-
-  @IsNotEmpty()
-  @IsIn(userConferenceActionsArray)
-  public action: UserConferenceAction;
 }

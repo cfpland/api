@@ -14,6 +14,7 @@ import { getRandomElements } from '../../shared/functions/get-random-elements';
 import { EmailSenderService } from '../../shared/modules/email-sender/services/email-sender.service';
 import { SenderResultDto } from '../../shared/modules/email-sender/dtos/sender-result.dto';
 import { Collection } from '../../data-access/interfaces/collection.interface';
+import { TrackedConference } from '../../data-access/tracked-conferences/tracked-conference.entity';
 
 @Injectable()
 export class NotificationsProcessorService {
@@ -122,6 +123,7 @@ export class NotificationsProcessorService {
         const summary = this.getUserAccountSummary(
           user.userConferences,
           conferences,
+          user.trackedConferences,
         );
         const email = this.builder.buildWeeklySummaryEmail(user, summary);
 
@@ -137,6 +139,7 @@ export class NotificationsProcessorService {
   private getUserAccountSummary(
     userConferences: UserConference[],
     conferences: Collection<ConferenceDto>,
+    trackedConferences: TrackedConference[],
   ): UserAccountSummaryInterface {
     const proCfps = conferences.items.filter(
       conference =>
@@ -148,23 +151,15 @@ export class NotificationsProcessorService {
     const openCfpSelection = collect(randomConferences);
 
     return {
-      acceptedCfpsCount: userConferences.filter(
-        userConference =>
-          userConference.action === 'tracked' &&
-          userConference.meta &&
-          userConference.meta.trackingStatus === 'accepted',
-      ).length,
-      appliedCfpsCount: userConferences.filter(
-        userConference =>
-          userConference.action === 'tracked' &&
-          userConference.meta &&
-          userConference.meta.trackingStatus === 'applied',
-      ).length,
+      acceptedCfpsCount: trackedConferences
+        .filter(userConference => userConference.status === 'accepted')
+        .length,
+      appliedCfpsCount: trackedConferences
+        .filter(userConference => userConference.status === 'applied')
+        .length,
       openCfpCount: conferences.total,
       openCfpSelection,
-      savedCfpsCount: userConferences.filter(
-        userConference => userConference.action === 'saved',
-      ).length,
+      savedCfpsCount: userConferences.length,
     };
   }
 
@@ -239,7 +234,6 @@ export class NotificationsProcessorService {
     conferences,
   ): ConferenceDto[] =>
     userConferences
-      .filter(userConference => userConference.action === 'saved')
       .map(userConference =>
         conferences.items.find(
           conference => conference.providerId === userConference.atConferenceId,

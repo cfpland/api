@@ -9,16 +9,18 @@ import { ConferenceCacheInterceptor } from './interceptors/conference-cache.inte
 import { ConferenceDatesInterceptor } from './interceptors/conference-dates.interceptor';
 import { DataAccessModule } from '../data-access/data-access.module';
 import { SearchesController } from './controllers/searches.controller';
-import { UserConferencesController } from './controllers/user-conferences.controller';
+import { SavedConferencesController } from './controllers/saved-conferences.controller';
 import { AbstractsController } from './controllers/abstracts.controller';
+import { TrackedConferencesController } from './controllers/tracked-conferences.controller';
 
 @Module({
   controllers: [
     ConferencesController,
     UsersController,
     SearchesController,
-    UserConferencesController,
+    SavedConferencesController,
     AbstractsController,
+    TrackedConferencesController,
   ],
   imports: [
     CacheModule.register({

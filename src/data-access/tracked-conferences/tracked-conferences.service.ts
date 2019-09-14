@@ -14,39 +14,39 @@ import {
   DeleteAllDataService,
   GetAllDataService,
 } from '../interfaces/data-service.interface';
-import { UserConference } from './entities/user-conference.entity';
 import { Collection } from '../interfaces/collection.interface';
 import { collect } from '../../shared/functions/collect';
-import { GetAllUserConferencesOptions } from './interfaces/get-all-user-conferences-options.interface';
+import { TrackedConference } from './tracked-conference.entity';
+import { GetAllTrackedConferencesOptions } from './interfaces/get-all-user-conferences-options.interface';
 
 @Injectable()
-export class UserConferencesService
+export class TrackedConferencesService
   implements
-    GetAllDataService<UserConference>,
-    CreateDataService<UserConference>,
-    DeleteAllDataService<UserConference> {
+    GetAllDataService<TrackedConference>,
+    CreateDataService<TrackedConference>,
+    DeleteAllDataService<TrackedConference> {
   constructor(
-    @InjectRepository(UserConference)
-    private readonly userConferencesRepository: Repository<UserConference>,
+    @InjectRepository(TrackedConference)
+    private readonly repository: Repository<TrackedConference>,
   ) {}
 
   public getAll(
-    options: GetAllUserConferencesOptions,
-  ): Observable<Collection<UserConference>> {
+    options: GetAllTrackedConferencesOptions,
+  ): Observable<Collection<TrackedConference>> {
     const findManyOptions = this.getFindManyOptions(options);
 
     return fromPromise(
-      this.userConferencesRepository.find(findManyOptions),
+      this.repository.find(findManyOptions),
     ).pipe(map(userConferences => collect(userConferences)));
   }
 
   public createOne(
-    toCreate: Partial<UserConference>,
-  ): Observable<UserConference> {
-    const userConference = this.userConferencesRepository.create(toCreate);
+    toCreate: Partial<TrackedConference>,
+  ): Observable<TrackedConference> {
+    const userConference = this.repository.create(toCreate);
 
     return fromPromise(
-      this.userConferencesRepository.save(userConference),
+      this.repository.save(userConference),
     ).pipe(
       map(uc => {
         delete uc.user;
@@ -56,22 +56,22 @@ export class UserConferencesService
   }
 
   public deleteAll(
-    options: GetAllUserConferencesOptions,
+    options: GetAllTrackedConferencesOptions,
   ): Observable<DeleteResult> {
     const findManyOptions = this.getFindManyOptions(options);
 
     return fromPromise(
-      this.userConferencesRepository.manager
+      this.repository.manager
         .createQueryBuilder()
         .delete()
-        .from(UserConference)
+        .from(TrackedConference)
         .where(findManyOptions.where)
         .execute(),
     );
   }
 
   private getFindManyOptions(
-    options?: GetAllUserConferencesOptions,
+    options?: GetAllTrackedConferencesOptions,
   ): FindManyOptions {
     const where: ObjectLiteral = {};
 

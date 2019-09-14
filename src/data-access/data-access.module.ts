@@ -24,6 +24,8 @@ import { RestcountriesClientService } from './locations/clients/restcountries-cl
 import { UserConferencesService } from './user-conferences/user-conferences.service';
 import { AbstractEntity } from './abstracts/abstract.entity';
 import { AbstractEntityService } from './abstracts/abstract-entity.service';
+import { TrackedConference } from './tracked-conferences/tracked-conference.entity';
+import { TrackedConferencesService } from './tracked-conferences/tracked-conferences.service';
 
 @Module({
   imports: [
@@ -34,7 +36,13 @@ import { AbstractEntityService } from './abstracts/abstract-entity.service';
       synchronize: process.env.ENVIRONMENT === 'develop',
       keepConnectionAlive: true,
     }),
-    TypeOrmModule.forFeature([User, UserConference, Search, AbstractEntity]),
+    TypeOrmModule.forFeature([
+      User,
+      UserConference,
+      Search,
+      AbstractEntity,
+      TrackedConference,
+    ]),
   ],
   providers: [
     AirtableConferencesClientService,
@@ -57,6 +65,7 @@ import { AbstractEntityService } from './abstracts/abstract-entity.service';
     UserConferencesService,
     UserService,
     AbstractEntityService,
+    TrackedConferencesService,
   ],
   exports: [
     ConferencesService,
@@ -68,6 +77,7 @@ import { AbstractEntityService } from './abstracts/abstract-entity.service';
     UserConferencesService,
     UserService,
     AbstractEntityService,
+    TrackedConferencesService,
   ],
 })
 export class DataAccessModule {}
