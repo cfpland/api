@@ -27,17 +27,17 @@ fixtures:
       location: Baltimore, MD
       communicationPreferences: {"savedConferences":true,"savedSearches":true,"weeklySummary":true}
       accountLevel: new
-  - UserConference:
+  - SavedConference:
       atConferenceId: reco2ByjULOGa5LJM
       user:
           id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
       createdAt: 2019-06-10 14:32:07.000000
-  - UserConference:
+  - SavedConference:
       atConferenceId: reco2ByjULOGa5LJM
       user:
           id: 4606dd6c-4fc9-447d-b673-823fae9f9027
       createdAt: 2019-06-10 14:32:07.000000
-  - UserConference:
+  - SavedConference:
       atConferenceId: rechPa2MFAvuhxHBC
       user:
           id: e34b5cf4-458b-45ec-a413-8c462f2ef09c

@@ -3,7 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserService } from './users/services/user.service';
 import { MoonclerkApiClientService } from './users/clients/moonclerk-api-client.service';
 import { User } from './users/entities/user.entity';
-import { UserConference } from './user-conferences/entities/user-conference.entity';
+import { SavedConference } from './saved-conferences/entities/saved-conference.entity';
 import { SubscribersService } from './subscribers/subscribers.service';
 import { subscribersClientProvider } from './providers/subscribers-client-provider';
 import { SearchService } from './searches/services/search.service';
@@ -21,7 +21,7 @@ import { ConferenceEnhancementsService } from './conference-enhancements/confere
 import { LocationsService } from './locations/locations.service';
 import { GeonamesClientService } from './locations/clients/geonames-client.service';
 import { RestcountriesClientService } from './locations/clients/restcountries-client.service';
-import { UserConferencesService } from './user-conferences/user-conferences.service';
+import { SavedConferencesService } from './saved-conferences/saved-conferences.service';
 import { AbstractEntity } from './abstracts/abstract.entity';
 import { AbstractEntityService } from './abstracts/abstract-entity.service';
 import { TrackedConference } from './tracked-conferences/tracked-conference.entity';
@@ -38,7 +38,7 @@ import { TrackedConferencesService } from './tracked-conferences/tracked-confere
     }),
     TypeOrmModule.forFeature([
       User,
-      UserConference,
+      SavedConference,
       Search,
       AbstractEntity,
       TrackedConference,
@@ -62,7 +62,7 @@ import { TrackedConferencesService } from './tracked-conferences/tracked-confere
     SearchService,
     subscribersClientProvider,
     SubscribersService,
-    UserConferencesService,
+    SavedConferencesService,
     UserService,
     AbstractEntityService,
     TrackedConferencesService,
@@ -74,7 +74,7 @@ import { TrackedConferencesService } from './tracked-conferences/tracked-confere
     PostsService,
     SearchService,
     SubscribersService,
-    UserConferencesService,
+    SavedConferencesService,
     UserService,
     AbstractEntityService,
     TrackedConferencesService,

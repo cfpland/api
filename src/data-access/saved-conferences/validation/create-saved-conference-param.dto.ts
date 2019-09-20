@@ -1,6 +1,6 @@
 import { IsNotEmpty, IsString } from 'class-validator';
 
-export class CreateUserConferenceParamDto {
+export class CreateSavedConferenceParamDto {
   @IsNotEmpty()
   @IsString()
   public atConferenceId: string;

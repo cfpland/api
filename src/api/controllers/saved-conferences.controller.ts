@@ -10,21 +10,21 @@ import {
 import { AuthGuard } from '@nestjs/passport';
 import { Observable } from 'rxjs';
 import { RequestWithUser } from '../../shared/types/request-with-user.type';
-import { UserConference } from '../../data-access/user-conferences/entities/user-conference.entity';
-import { CreateUserConferenceParamDto } from '../../data-access/user-conferences/validation/create-user-conference-param.dto';
+import { SavedConference } from '../../data-access/saved-conferences/entities/saved-conference.entity';
+import { CreateSavedConferenceParamDto } from '../../data-access/saved-conferences/validation/create-saved-conference-param.dto';
 import { Collection } from '../../data-access/interfaces/collection.interface';
-import { UserConferencesService } from '../../data-access/user-conferences/user-conferences.service';
+import { SavedConferencesService } from '../../data-access/saved-conferences/saved-conferences.service';
 import { DeleteResult } from 'typeorm';
 
 @Controller('v0/me/saved-conferences')
 export class SavedConferencesController {
-  constructor(private service: UserConferencesService) {}
+  constructor(private service: SavedConferencesService) {}
 
   @Get()
   @UseGuards(AuthGuard('bearer'))
   public getMeConferences(
     @Req() request: RequestWithUser,
-  ): Observable<Collection<UserConference>> {
+  ): Observable<Collection<SavedConference>> {
     return this.service.getAll({ userId: request.user.id });
   }
 
@@ -32,8 +32,8 @@ export class SavedConferencesController {
   @UseGuards(AuthGuard('bearer'))
   public putMeConference(
     @Req() request: RequestWithUser,
-    @Param() params: CreateUserConferenceParamDto,
-  ): Observable<UserConference> {
+    @Param() params: CreateSavedConferenceParamDto,
+  ): Observable<SavedConference> {
     return this.service.createOrUpdateOne({
       ...params,
       user: request.user,
@@ -45,7 +45,7 @@ export class SavedConferencesController {
   @HttpCode(204)
   public deleteMeConference(
     @Req() request: RequestWithUser,
-    @Param() params: CreateUserConferenceParamDto,
+    @Param() params: CreateSavedConferenceParamDto,
   ): Observable<DeleteResult> {
     return this.service.deleteAll({
       ...params,

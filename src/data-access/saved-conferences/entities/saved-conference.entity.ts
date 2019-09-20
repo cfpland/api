@@ -12,7 +12,7 @@ import { User } from '../../users/entities/user.entity';
     createdAt: 'DESC',
   },
 })
-export class UserConference {
+export class SavedConference {
   @Column()
   @PrimaryColumn()
   atConferenceId: string;

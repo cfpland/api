@@ -11,7 +11,7 @@ import {
 import { AuthGuard } from '@nestjs/passport';
 import { Observable } from 'rxjs';
 import { RequestWithUser } from '../../shared/types/request-with-user.type';
-import { UserConference } from '../../data-access/user-conferences/entities/user-conference.entity';
+import { SavedConference } from '../../data-access/saved-conferences/entities/saved-conference.entity';
 import { Collection } from '../../data-access/interfaces/collection.interface';
 import { DeleteResult } from 'typeorm';
 import { CreateTrackedConferenceParamDto } from '../../data-access/tracked-conferences/validation/create-tracked-conference-param.dto';
@@ -26,7 +26,7 @@ export class TrackedConferencesController {
   @UseGuards(AuthGuard('bearer'))
   public getMeTrackedConferences(
     @Req() request: RequestWithUser,
-  ): Observable<Collection<UserConference>> {
+  ): Observable<Collection<SavedConference>> {
     return this.service.getAll({ userId: request.user.id });
   }
 
@@ -36,7 +36,7 @@ export class TrackedConferencesController {
     @Req() request: RequestWithUser,
     @Param() params: CreateTrackedConferenceParamDto,
     @Body() body: CreateTrackedConferenceBodyDto,
-  ): Observable<UserConference> {
+  ): Observable<SavedConference> {
     return this.service.createOrUpdateOne({
       ...params,
       ...body,

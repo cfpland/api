@@ -53,13 +53,13 @@ describe('SavedConferences (/v0/me/saved-conferences)', () => {
     });
 
     it('can DELETE saved-conferences', async () => {
-        const userConference = savedFixtures.find(fixture =>
-            fixture.UserConference !== undefined &&
-            fixture.UserConference.user.id === testUserId,
+        const savedConference = savedFixtures.find(fixture =>
+            fixture.SavedConference !== undefined &&
+            fixture.SavedConference.user.id === testUserId,
         );
 
         const response = await request(app.getHttpServer())
-        .del(`/v0/me/saved-conferences/${userConference.UserConference.atConferenceId}`)
+        .del(`/v0/me/saved-conferences/${savedConference.SavedConference.atConferenceId}`)
         .set('Authorization', `Bearer ${faker.random.alphaNumeric(12)}`)
         .expect(204);
 

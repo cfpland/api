@@ -8,7 +8,7 @@ import * as moment from 'moment';
 import { collect } from '../../shared/functions/collect';
 import { Search } from '../../data-access/searches/entities/search.entity';
 import { SearchWithConferences } from '../../data-access/searches/interfaces/search-with-conferences.interface';
-import { UserConference } from '../../data-access/user-conferences/entities/user-conference.entity';
+import { SavedConference } from '../../data-access/saved-conferences/entities/saved-conference.entity';
 import { UserAccountSummaryInterface } from '../../shared/interfaces/user-account-summary.interface';
 import { getRandomElements } from '../../shared/functions/get-random-elements';
 import { EmailSenderService } from '../../shared/modules/email-sender/services/email-sender.service';
@@ -137,7 +137,7 @@ export class NotificationsProcessorService {
   }
 
   private getUserAccountSummary(
-    userConferences: UserConference[],
+    userConferences: SavedConference[],
     conferences: Collection<ConferenceDto>,
     trackedConferences: TrackedConference[],
   ): UserAccountSummaryInterface {
