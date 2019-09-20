@@ -31,7 +31,10 @@ export class TrackedConferencesService
   public getAll(
     options: GetAllTrackedConferencesOptions,
   ): Observable<Collection<TrackedConference>> {
-    const findManyOptions = this.getFindManyOptions(options);
+    const findManyOptions = this.getFindManyOptions({
+      ...options,
+      relations: ['abstracts'],
+    });
 
     return fromPromise(
       this.repository.find(findManyOptions),
@@ -72,6 +75,7 @@ export class TrackedConferencesService
     options?: GetAllTrackedConferencesOptions,
   ): FindManyOptions {
     const where: ObjectLiteral = {};
+    let relations: string[] = [];
 
     if (options) {
       if (options.userId !== undefined) {
@@ -80,8 +84,11 @@ export class TrackedConferencesService
       if (options.atConferenceId !== undefined) {
         where.atConferenceId = options.atConferenceId;
       }
+      if (options.relations && options.relations.length >= 1) {
+        relations = options.relations;
+      }
     }
 
-    return { where };
+    return { where, relations };
   }
 }

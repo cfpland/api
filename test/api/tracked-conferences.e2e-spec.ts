@@ -59,6 +59,34 @@ describe('TrackedConferences (/v0/me/tracked-conferences)', () => {
         expect(response.body.status).toEqual(status);
     });
 
+    it('can PUT tracked-conference with abstract', async () => {
+        const trackedConference = savedFixtures.find(fixture =>
+          fixture.TrackedConference !== undefined &&
+          fixture.TrackedConference.user.id === testUserId,
+        );
+        const abstractEntity = savedFixtures.find(fixture =>
+          fixture.AbstractEntity !== undefined &&
+          fixture.AbstractEntity.user.id === testUserId,
+        );
+        const airtableId = trackedConference.TrackedConference.atConferenceId;
+        const response = await request(app.getHttpServer())
+        .put(`/v0/me/tracked-conferences/${airtableId}`)
+        .send({
+            abstracts: [{id: abstractEntity.AbstractEntity.id}],
+            notes: 'Now this conference has an abstract',
+            status: trackedConference.TrackedConference.status,
+        })
+        .set('Authorization', `Bearer ${faker.random.alphaNumeric(12)}`)
+        .expect(200)
+        .expect('Content-Type', /json/);
+
+        expect(response.body).not.toBeNull();
+        expect(response.body.atConferenceId).toEqual(airtableId);
+        expect(response.body.notes).not.toBeNull();
+        expect(response.body.status).not.toBeNull();
+        expect(response.body.abstracts[0].id).toEqual(abstractEntity.AbstractEntity.id);
+    });
+
     it('can DELETE tracked-conferences', async () => {
         const trackedConference = savedFixtures.find(fixture =>
             fixture.TrackedConference !== undefined &&

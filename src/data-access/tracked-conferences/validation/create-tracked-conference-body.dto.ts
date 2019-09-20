@@ -1,5 +1,6 @@
-import { IsIn, IsNotEmpty, IsOptional, IsString, Length } from 'class-validator';
+import { IsArray, IsIn, IsNotEmpty, IsOptional, IsString, Length } from 'class-validator';
 import { TrackingStatus, trackingStatusArray } from '../types/tracking-status.type';
+import { AbstractEntity } from '../../abstracts/abstract.entity';
 
 export class CreateTrackedConferenceBodyDto {
   @IsNotEmpty()
@@ -10,4 +11,8 @@ export class CreateTrackedConferenceBodyDto {
   @IsString()
   @Length(0, 999)
   public notes: string;
+
+  @IsOptional()
+  @IsArray()
+  public abstracts: AbstractEntity[];
 }
