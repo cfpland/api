@@ -43,7 +43,7 @@ export class UserService {
       this.userRepository
         .createQueryBuilder('user')
         .select()
-        .leftJoinAndSelect('user.userConferences', 'userConferences')
+        .leftJoinAndSelect('user.savedConferences', 'savedConferences')
         .where(
           `user.communicationPreferences ::jsonb @> \'{"savedConferences":true}\'`,
         )
@@ -75,7 +75,7 @@ export class UserService {
       this.userRepository
         .createQueryBuilder('user')
         .select()
-        .leftJoinAndSelect('user.userConferences', 'userConferences')
+        .leftJoinAndSelect('user.savedConferences', 'savedConferences')
         .where(
           `user.communicationPreferences ::jsonb @> \'{"weeklySummary":true}\'`,
         )

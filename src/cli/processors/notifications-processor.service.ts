@@ -60,7 +60,7 @@ export class NotificationsProcessorService {
       try {
         const savedUserConferences = collect(
           this.filterSavedUserConferencesReadyForNotifications(
-            user.userConferences,
+            user.savedConferences,
             conferences,
           ),
         );
@@ -121,7 +121,7 @@ export class NotificationsProcessorService {
     for (const user of users.items) {
       try {
         const summary = this.getUserAccountSummary(
-          user.userConferences,
+          user.savedConferences,
           conferences,
           user.trackedConferences,
         );

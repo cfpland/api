@@ -27,6 +27,6 @@ export class UserConference {
     this.createdAt = new Date();
   }
 
-  @ManyToOne(type => User, user => user.userConferences, { primary: true })
+  @ManyToOne(type => User, user => user.savedConferences, { primary: true })
   user: User;
 }
