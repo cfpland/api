@@ -23,7 +23,7 @@ export class UserService {
   public selectBy = (key: string, value: string) => {
     const where = {};
     where[key] = value;
-    const relations = ['savedConferences', 'trackedConferences'];
+    const relations = ['savedConferences', 'trackedConferences', 'trackedConferences.abstracts'];
     return this.userRepository.findOne({ where, relations });
   };
 
