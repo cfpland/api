@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from '../validation/create-user.dto';
-import { UpdateUserDto } from '../validation/update-user.dto';
 import { Observable } from 'rxjs';
 import { User } from '../entities/user.entity';
 import { fromPromise } from 'rxjs/internal-compatibility';
@@ -10,7 +9,6 @@ import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { defaultCommunicationPreferences } from '../validation/user-communication-preferences.dto';
 import { MoonclerkApiClientService } from '../clients/moonclerk-api-client.service';
-import * as moment from 'moment';
 import { userAccountLevelsArray } from '../types/user-account-level.type';
 import { Collection } from '../../interfaces/collection.interface';
 
@@ -25,7 +23,8 @@ export class UserService {
   public selectBy = (key: string, value: string) => {
     const where = {};
     where[key] = value;
-    return this.userRepository.findOne({ where });
+    const relations = ['savedConferences', 'trackedConferences'];
+    return this.userRepository.findOne({ where, relations });
   };
 
   public createUser = (userDto: CreateUserDto): Observable<User> => {
@@ -44,7 +43,7 @@ export class UserService {
       this.userRepository
         .createQueryBuilder('user')
         .select()
-        .leftJoinAndSelect('user.userConferences', 'userConferences')
+        .leftJoinAndSelect('user.savedConferences', 'savedConferences')
         .where(
           `user.communicationPreferences ::jsonb @> \'{"savedConferences":true}\'`,
         )
@@ -76,7 +75,7 @@ export class UserService {
       this.userRepository
         .createQueryBuilder('user')
         .select()
-        .leftJoinAndSelect('user.userConferences', 'userConferences')
+        .leftJoinAndSelect('user.savedConferences', 'savedConferences')
         .where(
           `user.communicationPreferences ::jsonb @> \'{"weeklySummary":true}\'`,
         )

@@ -7,11 +7,12 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { UserConference } from '../../user-conferences/entities/user-conference.entity';
+import { SavedConference } from '../../saved-conferences/entities/saved-conference.entity';
 import { Search } from '../../searches/entities/search.entity';
 import * as md5 from 'md5';
 import { UserCommunicationPreferencesDto } from '../validation/user-communication-preferences.dto';
 import { AbstractEntity } from '../../abstracts/abstract.entity';
+import { TrackedConference } from '../../tracked-conferences/tracked-conference.entity';
 
 @Entity()
 export class User {
@@ -90,8 +91,11 @@ export class User {
     this.updatedAt = new Date();
   }
 
-  @OneToMany(type => UserConference, userConference => userConference.user)
-  userConferences: UserConference[];
+  @OneToMany(type => SavedConference, userConference => userConference.user)
+  savedConferences: SavedConference[];
+
+  @OneToMany(type => TrackedConference, trackedConference => trackedConference.user)
+  trackedConferences: TrackedConference[];
 
   @OneToMany(type => Search, search => search.user)
   searches: Search[];

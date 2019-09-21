@@ -49,7 +49,7 @@ export class UsersController {
     return of(request.user).pipe(
       mergeMap<User, Observable<User>>((user: User) =>
         this.userService.saveUser({
-          ...user,
+          id: user.id,
           ...userDto,
         } as User),
       ),

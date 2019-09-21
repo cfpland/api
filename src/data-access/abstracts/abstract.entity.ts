@@ -2,10 +2,13 @@ import {
   BeforeInsert,
   Column,
   Entity,
+  JoinTable,
+  ManyToMany,
   ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { User } from '../users/entities/user.entity';
+import { TrackedConference } from '../tracked-conferences/tracked-conference.entity';
 
 @Entity({ name: 'abstract' })
 export class AbstractEntity {
@@ -47,4 +50,7 @@ export class AbstractEntity {
 
   @ManyToOne(type => User, user => user.abstracts)
   user: User;
+
+  @ManyToMany(type => TrackedConference, trackedConference => trackedConference.abstracts)
+  trackedConferences: TrackedConference[];
 }

@@ -10,29 +10,27 @@ import {
 } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import {
-  CreateDataService,
   DeleteAllDataService,
   GetAllDataService,
 } from '../interfaces/data-service.interface';
-import { UserConference } from './entities/user-conference.entity';
+import { SavedConference } from './entities/saved-conference.entity';
 import { Collection } from '../interfaces/collection.interface';
 import { collect } from '../../shared/functions/collect';
-import { GetAllUserConferencesOptions } from './interfaces/get-all-user-conferences-options.interface';
+import { GetAllSavedConferencesOptions } from './interfaces/get-all-saved-conferences-options.interface';
 
 @Injectable()
-export class UserConferencesService
+export class SavedConferencesService
   implements
-    GetAllDataService<UserConference>,
-    CreateDataService<UserConference>,
-    DeleteAllDataService<UserConference> {
+    GetAllDataService<SavedConference>,
+    DeleteAllDataService<SavedConference> {
   constructor(
-    @InjectRepository(UserConference)
-    private readonly userConferencesRepository: Repository<UserConference>,
+    @InjectRepository(SavedConference)
+    private readonly userConferencesRepository: Repository<SavedConference>,
   ) {}
 
   public getAll(
-    options: GetAllUserConferencesOptions,
-  ): Observable<Collection<UserConference>> {
+    options: GetAllSavedConferencesOptions,
+  ): Observable<Collection<SavedConference>> {
     const findManyOptions = this.getFindManyOptions(options);
 
     return fromPromise(
@@ -40,9 +38,9 @@ export class UserConferencesService
     ).pipe(map(userConferences => collect(userConferences)));
   }
 
-  public createOne(
-    toCreate: Partial<UserConference>,
-  ): Observable<UserConference> {
+  public createOrUpdateOne(
+    toCreate: Partial<SavedConference>,
+  ): Observable<SavedConference> {
     const userConference = this.userConferencesRepository.create(toCreate);
 
     return fromPromise(
@@ -56,7 +54,7 @@ export class UserConferencesService
   }
 
   public deleteAll(
-    options: GetAllUserConferencesOptions,
+    options: GetAllSavedConferencesOptions,
   ): Observable<DeleteResult> {
     const findManyOptions = this.getFindManyOptions(options);
 
@@ -64,23 +62,20 @@ export class UserConferencesService
       this.userConferencesRepository.manager
         .createQueryBuilder()
         .delete()
-        .from(UserConference)
+        .from(SavedConference)
         .where(findManyOptions.where)
         .execute(),
     );
   }
 
   private getFindManyOptions(
-    options?: GetAllUserConferencesOptions,
+    options?: GetAllSavedConferencesOptions,
   ): FindManyOptions {
     const where: ObjectLiteral = {};
 
     if (options) {
       if (options.userId !== undefined) {
         where.user = options.userId;
-      }
-      if (options.action !== undefined) {
-        where.action = options.action;
       }
       if (options.atConferenceId !== undefined) {
         where.atConferenceId = options.atConferenceId;

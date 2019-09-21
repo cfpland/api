@@ -6,28 +6,16 @@ import {
   PrimaryColumn,
 } from 'typeorm';
 import { User } from '../../users/entities/user.entity';
-import { UserConferenceAction } from '../types/user-conference-action.type';
-import { UserConferenceMetaDto } from '../validation/user-conference-meta.dto';
 
 @Entity({
   orderBy: {
     createdAt: 'DESC',
   },
 })
-export class UserConference {
+export class SavedConference {
   @Column()
   @PrimaryColumn()
   atConferenceId: string;
-
-  @Column()
-  @PrimaryColumn()
-  action: UserConferenceAction;
-
-  @Column({
-    type: 'json',
-    nullable: true,
-  })
-  meta: UserConferenceMetaDto;
 
   @Column({
     type: 'timestamptz',
@@ -39,6 +27,6 @@ export class UserConference {
     this.createdAt = new Date();
   }
 
-  @ManyToOne(type => User, user => user.userConferences, { primary: true })
+  @ManyToOne(type => User, user => user.savedConferences, { primary: true })
   user: User;
 }

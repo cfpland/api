@@ -27,42 +27,37 @@ fixtures:
       location: Baltimore, MD
       communicationPreferences: {"savedConferences":true,"savedSearches":true,"weeklySummary":true}
       accountLevel: new
-  - UserConference:
+  - SavedConference:
       atConferenceId: reco2ByjULOGa5LJM
-      action: saved
       user:
           id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
       createdAt: 2019-06-10 14:32:07.000000
-  - UserConference:
+  - SavedConference:
       atConferenceId: reco2ByjULOGa5LJM
-      action: saved
       user:
           id: 4606dd6c-4fc9-447d-b673-823fae9f9027
       createdAt: 2019-06-10 14:32:07.000000
-  - UserConference:
+  - SavedConference:
       atConferenceId: rechPa2MFAvuhxHBC
-      action: saved
       user:
           id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
       createdAt: 2019-06-10 14:32:07.000000
-  - UserConference:
+  - TrackedConference:
       atConferenceId: recCU0WehEJrKwrF8
-      action: tracked
-      meta: {"trackingStatus":"applied"}
-      createdAt: 2019-06-10 14:32:07.000000
+      status: applied
+      notes: "Some notes about this conference I'm tracking"
       user:
           id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
-  - UserConference:
+      createdAt: 2019-06-10 14:32:07.000000
+  - TrackedConference:
       atConferenceId: rec9lyc8TdxpI56Yn
-      action: tracked
-      meta: {"trackingStatus":"accepted"}
+      status: accepted
       user:
           id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
       createdAt: 2019-06-10 14:32:07.000000
-  - UserConference:
+  - TrackedConference:
       atConferenceId: reclFaPogy8O4IGBm
-      action: tracked
-      meta: {"trackingStatus":"rejected"}
+      status: rejected
       user:
           id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
       createdAt: 2019-06-10 14:32:07.000000
