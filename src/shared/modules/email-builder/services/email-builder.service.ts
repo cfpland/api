@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { EmailDto } from '../dtos/email.dto';
 import { SubscriberDto } from '../../../../data-access/subscribers/dtos/subscriber.dto';
 import { ConferenceDto } from '../../../../data-access/conferences/dtos/conference.dto';
@@ -102,6 +102,10 @@ export class EmailBuilderService {
   private getNotificationHtml(template: string, inputs: any): string {
     const mjmlTemplate = this.handlebars.compile(template);
     const mjmlContent = mjmlTemplate(inputs);
+
+    if (process.env.DEBUG_MJML === 'true') {
+      Logger.debug(mjmlContent);
+    }
 
     return this.minifyHtml(mjml2html(mjmlContent).html);
   }
