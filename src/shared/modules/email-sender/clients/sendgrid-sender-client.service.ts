@@ -35,7 +35,7 @@ export class SendgridSenderClientService {
       html: email.html,
       tracking_settings: {
         click_tracking: {
-          enable: false,
+          enable: true,
         },
         open_tracking: {
           enable: true,
