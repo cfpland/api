@@ -26,6 +26,8 @@ import { AbstractEntity } from './abstracts/abstract.entity';
 import { AbstractEntityService } from './abstracts/abstract-entity.service';
 import { TrackedConference } from './tracked-conferences/tracked-conference.entity';
 import { TrackedConferencesService } from './tracked-conferences/tracked-conferences.service';
+import { EmailTrackingService } from './email-tracking/email-tracking.service';
+import { EmailTracking } from './email-tracking/email-tracking.entity';
 
 @Module({
   imports: [
@@ -42,6 +44,7 @@ import { TrackedConferencesService } from './tracked-conferences/tracked-confere
       Search,
       AbstractEntity,
       TrackedConference,
+      EmailTracking,
     ]),
   ],
   providers: [
@@ -66,6 +69,7 @@ import { TrackedConferencesService } from './tracked-conferences/tracked-confere
     UserService,
     AbstractEntityService,
     TrackedConferencesService,
+    EmailTrackingService,
   ],
   exports: [
     ConferencesService,
@@ -78,6 +82,7 @@ import { TrackedConferencesService } from './tracked-conferences/tracked-confere
     UserService,
     AbstractEntityService,
     TrackedConferencesService,
+    EmailTrackingService,
   ],
 })
 export class DataAccessModule {}
