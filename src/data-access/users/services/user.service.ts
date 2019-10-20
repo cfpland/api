@@ -12,6 +12,8 @@ import { MoonclerkApiClientService } from '../clients/moonclerk-api-client.servi
 import { userAccountLevelsArray } from '../types/user-account-level.type';
 import { Collection } from '../../interfaces/collection.interface';
 import { UserAccount } from '../../accounts/user-account.entity';
+import moment = require('moment');
+import { MoonclerkCustomer } from '../clients/moonclerk-customer.interface';
 
 const defaultUserAccount: DeepPartial<UserAccount> = {
   role: 'owner',
@@ -25,6 +27,7 @@ export class UserService {
   constructor(
     @InjectRepository(User)
     private readonly userRepository: Repository<User>,
+    private readonly userAccountRepository: Repository<UserAccount>,
     private readonly moonclerkApiClient: MoonclerkApiClientService,
   ) {}
 
@@ -101,37 +104,49 @@ export class UserService {
   public saveUser = (user: User): Observable<User> =>
     fromPromise(this.userRepository.save(user));
 
-  public getUserPaymentStatus = (user: User): Observable<any> => {
-    // Get all users who have checked out in the past 30 days
+  public getUserPaymentStatus = (user: User): Observable<MoonclerkCustomer> => {
+    const existingProAccount = user.userAccounts.find(userAccount => userAccount.account.type === 'pro');
+
+    return existingProAccount ? this.getExistingCustomer(existingProAccount) : this.getNewCustomer(user);
+  };
+
+  private getExistingCustomer(proAccount: UserAccount): Observable<MoonclerkCustomer> {
+    return this.moonclerkApiClient.getCustomer(proAccount.account.moonclerkPlanId);
+  }
+
+  private getNewCustomer(user: User): Observable<MoonclerkCustomer> {
+    // Get all users who have completed pro checkout out in the past 30 days
     const options = {
-      // checkout_from: moment()
-      //   .subtract(30, 'days')
-      //   .format('YYYY-MM-DD'),
-      // checkout_to: moment()
-      //   .add(1, 'days')
-      //   .format('YYYY-MM-DD'),
+      checkout_from: moment()
+        .subtract(30, 'days')
+        .format('YYYY-MM-DD'),
+      checkout_to: moment()
+        .add(1, 'days')
+        .format('YYYY-MM-DD'),
       form_id: '217435',
     };
     return this.moonclerkApiClient.getCustomers(options).pipe(
-      map(customers =>
-        customers.find(customer => customer.custom_id === user.id),
-      ),
+      map(customers => customers.find(customer => customer.custom_id === user.id)),
       tap(customer => this.updateUserAccountLevel(user, customer)),
     );
-  };
+  }
 
-  private updateUserAccountLevel(user: User, customer: any): void {
-    if (
-      user.accountLevel === userAccountLevelsArray[0] &&
-      this.isPaidCustomer(customer)
-    ) {
-      this.userRepository.update(user.id, {
-        accountLevel: userAccountLevelsArray[1],
+  private updateUserAccountLevel(user: User, customer: MoonclerkCustomer): void {
+    if (this.isPaidCustomer(customer)) {
+      this.userAccountRepository.create({
+        account: {
+          maxUsers: 1,
+          monthlyPaymentAmount: customer.checkout.amount_due,
+          moonclerkPlanId: customer.id.toString(),
+          type: 'pro',
+        },
+        role: 'owner',
+        user: { id: user.id },
       });
     }
   }
 
-  private isPaidCustomer(customer: any): boolean {
+  private isPaidCustomer(customer: MoonclerkCustomer): boolean {
     return (
       customer &&
       customer.subscription &&
