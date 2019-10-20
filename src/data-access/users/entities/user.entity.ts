@@ -13,6 +13,7 @@ import * as md5 from 'md5';
 import { UserCommunicationPreferencesDto } from '../validation/user-communication-preferences.dto';
 import { AbstractEntity } from '../../abstracts/abstract.entity';
 import { TrackedConference } from '../../tracked-conferences/tracked-conference.entity';
+import { UserAccount } from '../../accounts/user-account.entity';
 
 @Entity()
 export class User {
@@ -102,6 +103,9 @@ export class User {
 
   @OneToMany(type => AbstractEntity, abstractEntity => abstractEntity.user)
   abstracts: AbstractEntity[];
+
+  @OneToMany(type => UserAccount, userAccount => userAccount.user)
+  userAccounts: UserAccount[];
 
   protected profileUrl: string;
 
