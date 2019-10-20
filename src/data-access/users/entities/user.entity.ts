@@ -14,6 +14,7 @@ import { UserCommunicationPreferencesDto } from '../validation/user-communicatio
 import { AbstractEntity } from '../../abstracts/abstract.entity';
 import { TrackedConference } from '../../tracked-conferences/tracked-conference.entity';
 import { UserAccount } from '../../accounts/user-account.entity';
+import { AccountType } from '../../accounts/types/account.type';
 
 @Entity()
 export class User {
@@ -67,11 +68,6 @@ export class User {
   communicationPreferences: UserCommunicationPreferencesDto;
 
   @Column({
-    nullable: true,
-  })
-  accountLevel: string;
-
-  @Column({
     type: 'timestamptz',
   })
   createdAt: Date;
@@ -104,7 +100,7 @@ export class User {
   @OneToMany(type => AbstractEntity, abstractEntity => abstractEntity.user)
   abstracts: AbstractEntity[];
 
-  @OneToMany(type => UserAccount, userAccount => userAccount.user)
+  @OneToMany(type => UserAccount, userAccount => userAccount.user, {cascade: ['insert']})
   userAccounts: UserAccount[];
 
   protected profileUrl: string;
@@ -113,5 +109,22 @@ export class User {
   getUrl() {
     const emailHash = md5(this.email);
     this.profileUrl = `https://www.gravatar.com/avatar/${emailHash}?d=retro`;
+  }
+
+  protected accountLevel: AccountType;
+
+  @AfterLoad()
+  getAccountLevel() {
+    if (this.userAccounts && this.userAccounts.length && this.userAccounts.length > 0) {
+      this.accountLevel = this.userAccounts.reduce((highestType: AccountType, userAccount: UserAccount): AccountType => {
+        if (highestType === 'team' || userAccount.account.type === 'team') {
+          return 'team';
+        } else if (highestType === 'pro' || userAccount.account.type === 'pro') {
+          return 'pro';
+        } else {
+          return 'free';
+        }
+      }, 'free');
+    }
   }
 }

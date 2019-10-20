@@ -43,7 +43,6 @@ describe('Users (/v0/me)', () => {
         const newUser = {
             email: faker.internet.exampleEmail(),
             auth0UserId: faker.random.alphaNumeric(12),
-            accountLevel: 'new',
         };
         const response = await request(app.getHttpServer())
         .post('/v0/users')
@@ -56,7 +55,10 @@ describe('Users (/v0/me)', () => {
         expect(response.body.id).not.toBeNull();
         expect(response.body.email).toBe(newUser.email);
         expect(response.body.auth0UserId).toBe(newUser.auth0UserId);
-        expect(response.body.accountLevel).toBe(newUser.accountLevel);
+        // Make sure the user is given a free account by default
+        expect(response.body.userAccounts.length).toBe(1);
+        expect(response.body.userAccounts[0].role).toBe('owner');
+        expect(response.body.userAccounts[0].account.type).toBe('free');
     });
 
     afterAll(async () => {

@@ -5,12 +5,20 @@ import { User } from '../entities/user.entity';
 import { fromPromise } from 'rxjs/internal-compatibility';
 import { map, tap } from 'rxjs/operators';
 import { collect } from '../../../shared/functions/collect';
-import { Repository } from 'typeorm';
+import { DeepPartial, Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { defaultCommunicationPreferences } from '../validation/user-communication-preferences.dto';
 import { MoonclerkApiClientService } from '../clients/moonclerk-api-client.service';
 import { userAccountLevelsArray } from '../types/user-account-level.type';
 import { Collection } from '../../interfaces/collection.interface';
+import { UserAccount } from '../../accounts/user-account.entity';
+
+const defaultUserAccount: DeepPartial<UserAccount> = {
+  role: 'owner',
+  account: {
+    type: 'free',
+  },
+};
 
 @Injectable()
 export class UserService {
@@ -37,7 +45,7 @@ export class UserService {
     if (!userDto.communicationPreferences) {
       userDto.communicationPreferences = defaultCommunicationPreferences;
     }
-    const user = this.userRepository.create(userDto);
+    const user = this.userRepository.create({...userDto, userAccounts: [defaultUserAccount]});
 
     return this.saveUser(user);
   };

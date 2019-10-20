@@ -18,6 +18,6 @@ export class UserAccount {
   @ManyToOne(type => User, user => user.userAccounts, {primary: true})
   user: User;
 
-  @ManyToOne(type => Account, account => account.userAccounts, {primary: true})
+  @ManyToOne(type => Account, account => account.userAccounts, {primary: true, cascade: ['insert']})
   account: Account;
 }
