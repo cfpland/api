@@ -8,6 +8,8 @@ import { ConfigService } from '../../../config/config.service';
 interface MoonclerkCustomerOptions {
   checkout_from?: string;
   checkout_to?: string;
+  form_id?: string;
+  status?: string;
 }
 
 @Injectable()
