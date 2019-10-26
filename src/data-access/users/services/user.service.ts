@@ -3,7 +3,7 @@ import { CreateUserDto } from '../validation/create-user.dto';
 import { Observable } from 'rxjs';
 import { User } from '../entities/user.entity';
 import { fromPromise } from 'rxjs/internal-compatibility';
-import { map, tap } from 'rxjs/operators';
+import { filter, flatMap, map, mapTo } from 'rxjs/operators';
 import { collect } from '../../../shared/functions/collect';
 import { DeepPartial, Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -130,23 +130,25 @@ export class UserService {
     };
     return this.moonclerkApiClient.getCustomers(options).pipe(
       map(customers => customers.find(customer => customer.custom_id === user.id)),
-      tap(customer => this.updateUserAccountLevel(user, customer)),
+      filter(customer => this.isPaidCustomer(customer)),
+      flatMap((customer: MoonclerkCustomer) =>
+        this.updateUserAccountLevel(user, customer).pipe(mapTo(customer)),
+      ),
     );
   }
 
-  private updateUserAccountLevel(user: User, customer: MoonclerkCustomer): void {
-    if (this.isPaidCustomer(customer)) {
-      this.userAccountRepository.create({
-        account: {
-          maxUsers: 1,
-          monthlyPaymentAmount: customer.checkout.amount_due,
-          moonclerkPlanId: customer.id.toString(),
-          type: 'pro',
-        },
-        role: 'owner',
-        user: { id: user.id },
-      });
-    }
+  private updateUserAccountLevel(user: User, customer: MoonclerkCustomer): Observable<UserAccount> {
+    const newUserAccount = this.userAccountRepository.create({
+      account: {
+        maxUsers: 1,
+        monthlyPaymentAmount: customer.checkout.amount_due,
+        moonclerkPlanId: customer.id.toString(),
+        type: 'pro',
+      },
+      role: 'owner',
+      user: { id: user.id },
+    });
+    return fromPromise(this.userAccountRepository.save(newUserAccount));
   }
 
   private isPaidCustomer(customer: MoonclerkCustomer): boolean {
