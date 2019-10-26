@@ -9,11 +9,11 @@ import { DeepPartial, Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { defaultCommunicationPreferences } from '../validation/user-communication-preferences.dto';
 import { MoonclerkApiClientService } from '../clients/moonclerk-api-client.service';
-import { userAccountLevelsArray } from '../types/user-account-level.type';
 import { Collection } from '../../interfaces/collection.interface';
 import { UserAccount } from '../../accounts/user-account.entity';
 import moment = require('moment');
 import { MoonclerkCustomer } from '../clients/moonclerk-customer.interface';
+import { ConfigService } from '../../../config/config.service';
 
 const defaultUserAccount: DeepPartial<UserAccount> = {
   role: 'owner',
@@ -27,8 +27,10 @@ export class UserService {
   constructor(
     @InjectRepository(User)
     private readonly userRepository: Repository<User>,
+    @InjectRepository(UserAccount)
     private readonly userAccountRepository: Repository<UserAccount>,
     private readonly moonclerkApiClient: MoonclerkApiClientService,
+    private readonly config: ConfigService,
   ) {}
 
   public selectBy = (key: string, value: string) => {
@@ -123,7 +125,8 @@ export class UserService {
       checkout_to: moment()
         .add(1, 'days')
         .format('YYYY-MM-DD'),
-      form_id: '217435',
+      form_id: this.config.get('MOONCLERK_PRO_FORM_ID'),
+      status: 'active',
     };
     return this.moonclerkApiClient.getCustomers(options).pipe(
       map(customers => customers.find(customer => customer.custom_id === user.id)),

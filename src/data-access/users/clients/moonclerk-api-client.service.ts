@@ -29,9 +29,7 @@ export class MoonclerkApiClientService {
         },
       })
         .then(res => res.json())
-        .then(data => {
-          return data && data.customers ? data.customers : [];
-        }),
+        .then(data => data && data.customers ? data.customers : []),
     );
   };
 
