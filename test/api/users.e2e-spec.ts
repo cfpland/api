@@ -28,7 +28,7 @@ describe('Users (/v0/me)', () => {
         await app.init();
     });
 
-    it('can GET their account', async () => {
+    it('can GET their own account', async () => {
         const response = await request(app.getHttpServer())
         .get('/v0/me')
         .set('Authorization', `Bearer ${faker.random.alphaNumeric(12)}`)
@@ -37,6 +37,28 @@ describe('Users (/v0/me)', () => {
 
         expect(response.body).not.toBeNull();
         expect(response.body.id).toEqual(testUserId);
+    });
+
+    it('can POST new user account', async () => {
+        const newUser = {
+            email: faker.internet.exampleEmail(),
+            auth0UserId: faker.random.alphaNumeric(12),
+        };
+        const response = await request(app.getHttpServer())
+        .post('/v0/users')
+        .send(newUser)
+        .set('Authorization', `Bearer ${process.env.AUTH0_CREATE_USER_KEY}`)
+        .expect(201)
+        .expect('Content-Type', /json/);
+
+        expect(response.body).not.toBeNull();
+        expect(response.body.id).not.toBeNull();
+        expect(response.body.email).toBe(newUser.email);
+        expect(response.body.auth0UserId).toBe(newUser.auth0UserId);
+        // Make sure the user is given a free account by default
+        expect(response.body.userAccounts.length).toBe(1);
+        expect(response.body.userAccounts[0].role).toBe('owner');
+        expect(response.body.userAccounts[0].account.type).toBe('free');
     });
 
     afterAll(async () => {

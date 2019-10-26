@@ -1,16 +1,11 @@
 import {
   IsEmail,
-  IsIn,
   IsNotEmpty,
   IsOptional,
   IsString,
   ValidateNested,
 } from 'class-validator';
 import { UserCommunicationPreferencesDto } from './user-communication-preferences.dto';
-import {
-  UserAccountLevel,
-  userAccountLevelsArray,
-} from '../types/user-account-level.type';
 import { Type } from 'class-transformer';
 
 export class CreateUserDto {
@@ -19,9 +14,6 @@ export class CreateUserDto {
 
   @IsNotEmpty()
   public auth0UserId: string;
-
-  @IsIn(userAccountLevelsArray)
-  accountLevel: UserAccountLevel;
 
   @IsOptional()
   public firstName?: string;

@@ -4,11 +4,8 @@ import { fromPromise } from 'rxjs/internal-compatibility';
 import * as queryString from 'querystring';
 import { Observable } from 'rxjs';
 import { ConfigService } from '../../../config/config.service';
-
-interface MoonclerkCustomerOptions {
-  checkout_from?: string;
-  checkout_to?: string;
-}
+import { MoonclerkCustomer } from './moonclerk-customer.interface';
+import { MoonclerkCustomerOptions } from './moonclerk-customer-options.interface';
 
 @Injectable()
 export class MoonclerkApiClientService {
@@ -22,7 +19,7 @@ export class MoonclerkApiClientService {
 
   public getCustomers = (
     options: MoonclerkCustomerOptions = {},
-  ): Observable<any[]> => {
+  ): Observable<MoonclerkCustomer[]> => {
     const query = queryString.stringify(options);
     return fromPromise(
       fetch(`${this.baseUrl}/customers?${query}`, {
@@ -32,9 +29,20 @@ export class MoonclerkApiClientService {
         },
       })
         .then(res => res.json())
-        .then(data => {
-          return data && data.customers ? data.customers : [];
-        }),
+        .then(data => data && data.customers ? data.customers : []),
+    );
+  };
+
+  public getCustomer = (planId: string): Observable<MoonclerkCustomer> => {
+    return fromPromise(
+      fetch(`${this.baseUrl}/customers/${planId}`, {
+        headers: {
+          Authorization: `Token token=${this.token}`,
+          Accept: 'application/vnd.moonclerk+json;version=1',
+        },
+      })
+        .then(res => res.json())
+        .then(data => (data && data.customer) ? data.customer : undefined),
     );
   };
 }

@@ -13,6 +13,32 @@ fixtures:
       location: Baltimore, MD
       communicationPreferences: {"savedConferences":true,"savedSearches":true,"weeklySummary":true}
       accountLevel: pro
+  - Account:
+        id: b4b42400-6d19-453d-b05d-90be5e2c5499
+        name:
+        type: free
+        createdAt: 2019-06-10 14:32:07.000000
+  - UserAccount:
+        role: owner
+        user:
+            id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
+        account:
+            id: b4b42400-6d19-453d-b05d-90be5e2c5499
+  - Account:
+        id: a0e686db-2efc-4460-aad4-0a753feb703b
+        name:
+        type: pro
+        monthlyPaymentAmount: 9.5
+        moonclerkPlanId: 123-456-789
+        createdAt: 2019-06-10 14:32:07.000000
+  - UserAccount:
+        role: owner
+        user:
+            id: e34b5cf4-458b-45ec-a413-8c462f2ef09c
+        account:
+            id: a0e686db-2efc-4460-aad4-0a753feb703b
+        createdAt: 2019-06-10 14:32:07.000000
+
   - User:
       id: 4606dd6c-4fc9-447d-b673-823fae9f9027
       email: stringer@example.com
@@ -27,6 +53,18 @@ fixtures:
       location: Baltimore, MD
       communicationPreferences: {"savedConferences":true,"savedSearches":true,"weeklySummary":true}
       accountLevel: new
+  - Account:
+        id: f2296e7f-d357-4dd2-b5f9-b926060dcb50
+        name:
+        type: free
+        createdAt: 2019-06-10 14:32:07.000000
+  - UserAccount:
+        role: owner
+        user:
+            id: 4606dd6c-4fc9-447d-b673-823fae9f9027
+        account:
+            id: f2296e7f-d357-4dd2-b5f9-b926060dcb50
+
   - SavedConference:
       atConferenceId: reco2ByjULOGa5LJM
       user:

@@ -28,6 +28,7 @@ import { TrackedConference } from './tracked-conferences/tracked-conference.enti
 import { TrackedConferencesService } from './tracked-conferences/tracked-conferences.service';
 import { EmailTrackingService } from './email-tracking/email-tracking.service';
 import { EmailTracking } from './email-tracking/email-tracking.entity';
+import { UserAccount } from './accounts/user-account.entity';
 
 @Module({
   imports: [
@@ -45,6 +46,7 @@ import { EmailTracking } from './email-tracking/email-tracking.entity';
       AbstractEntity,
       TrackedConference,
       EmailTracking,
+      UserAccount,
     ]),
   ],
   providers: [

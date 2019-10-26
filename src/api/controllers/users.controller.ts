@@ -19,6 +19,7 @@ import { RequestWithUser } from '../../shared/types/request-with-user.type';
 import { UserService } from '../../data-access/users/services/user.service';
 import { SearchService } from '../../data-access/searches/services/search.service';
 import { ConfigService } from '../../config/config.service';
+import { MoonclerkCustomer } from '../../data-access/users/clients/moonclerk-customer.interface';
 
 @Controller('v0')
 export class UsersController {
@@ -36,7 +37,7 @@ export class UsersController {
 
   @Get('me/payment')
   @UseGuards(AuthGuard('bearer'))
-  public getMePayment(@Req() request: RequestWithUser): Observable<User> {
+  public getMePayment(@Req() request: RequestWithUser): Observable<MoonclerkCustomer> {
     return this.userService.getUserPaymentStatus(request.user);
   }
 
