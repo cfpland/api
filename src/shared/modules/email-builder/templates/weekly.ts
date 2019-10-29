@@ -85,20 +85,23 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section>
     {{/each}}
-
+    
     <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="32%">
-        <mj-image href="https://pro.cfpland.com/" align="center" src="https://i.imgur.com/LUVnO8u.png?1"></mj-image>
+      <mj-column width="35%">
+        <mj-image align="center" href="https://www.developer-first.com/conference" src="https://i.imgur.com/0j9TSeZ.png"></mj-image>
       </mj-column>
-      <mj-column width="68%">
+      <mj-column width="65%">
         <mj-text font-weight="bold">
-          <a href="https://pro.cfpland.com/">Upgrade to CFP Land Pro!</a>
+          <a href="https://www.developer-first.com/conference">Are you passionate about the people side of software development?</a>
         </mj-text>
         <mj-text color="#666666" font-size="14px" line-height="20px">
-          <strong>Reach your speaking goals faster:</strong> Pro users get submission tracking, extra alerts, and access to CFPs 3 weeks before free users see them. Lock in early adopter pricing by signing up today!
+          The 2020 Developer First conference is designed to facilitate meaningful conversations and provide tactical strategies for becoming confident and inspiring leaders in tech.  CFP & Sponsorships open now!
         </mj-text>
-        <mj-text><a href="https://pro.cfpland.com/">Learn More →</a></mj-text>
+        <mj-text>
+          <a href="https://www.developer-first.com/conference">Learn more and apply now! →</a>
+        </mj-text>
+        <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
     </mj-section>
 
@@ -148,6 +151,23 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section>
     {{/if}}{{/each}}
+    
+
+    <!-- Sponsor 2 -->
+    <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
+      <mj-column width="32%">
+        <mj-image href="https://pro.cfpland.com/" align="center" src="https://i.imgur.com/LUVnO8u.png?1"></mj-image>
+      </mj-column>
+      <mj-column width="68%">
+        <mj-text font-weight="bold">
+          <a href="https://pro.cfpland.com/">Upgrade to CFP Land Pro!</a>
+        </mj-text>
+        <mj-text color="#666666" font-size="14px" line-height="20px">
+          <strong>Reach your speaking goals faster:</strong> Pro users get submission tracking, extra alerts, and access to CFPs 3 weeks before free users see them. Sign up today!
+        </mj-text>
+        <mj-text><a href="https://pro.cfpland.com/">Learn More →</a></mj-text>
+      </mj-column>
+    </mj-section>
     {{/if}}
     
     <!-- Feed Divider -->
