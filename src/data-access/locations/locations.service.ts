@@ -12,7 +12,7 @@ export class LocationsService implements GetOneDataService<Location> {
   private idField = 'friendlyName';
 
   constructor(
-    private readonly countryClient: GeonamesClientService,
+    private readonly geonamesClient: GeonamesClientService,
     private readonly regionClient: RestcountriesClientService,
   ) {}
 
@@ -21,18 +21,22 @@ export class LocationsService implements GetOneDataService<Location> {
       throw new Error(`Location requires a field value "${this.idField}".`);
     }
 
-    return fromPromise(this.countryClient.getCountry(value)).pipe(
+    return fromPromise(this.geonamesClient.getSearch(value)).pipe(
       filter(
-        country => country.code !== undefined && country.name !== undefined,
+        geonamesLocation => geonamesLocation.code !== undefined &&
+          geonamesLocation.country !== undefined,
       ),
-      mergeMap(country =>
+      mergeMap(geonamesLocation =>
         fromPromise(
-          this.regionClient.getRegionByCountryCode(country.code),
+          this.regionClient.getRegionByCountryCode(geonamesLocation.code),
         ).pipe(
           filter(region => region.region !== undefined),
           map(region => ({
-            country,
+            city: geonamesLocation.city,
+            country: geonamesLocation.country,
             friendlyName: value,
+            latitude: geonamesLocation.latitude,
+            longitude: geonamesLocation.longitude,
             region: region.region,
             subregion: region.subregion,
           })),
