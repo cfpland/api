@@ -62,16 +62,6 @@ export class User {
   location: string;
 
   @Column({
-    nullable: true,
-  })
-  city: string;
-
-  @Column({
-    nullable: true,
-  })
-  country: string;
-
-  @Column({
     type: 'point',
     nullable: true,
   })

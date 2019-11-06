@@ -13,6 +13,7 @@ import { SavedConferencesController } from './controllers/saved-conferences.cont
 import { AbstractsController } from './controllers/abstracts.controller';
 import { TrackedConferencesController } from './controllers/tracked-conferences.controller';
 import { EmailTrackingController } from './controllers/email-tracking.controller';
+import { LocationsController } from './controllers/locations.controller';
 
 @Module({
   controllers: [
@@ -23,6 +24,7 @@ import { EmailTrackingController } from './controllers/email-tracking.controller
     AbstractsController,
     TrackedConferencesController,
     EmailTrackingController,
+    LocationsController,
   ],
   imports: [
     CacheModule.register({

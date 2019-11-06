@@ -14,7 +14,7 @@ export class GeonamesClientService {
     this.username = config.get('GEONAMES_USERNAME');
   }
 
-  public async getSearch(search: string): Promise<GeonamesLocation> {
+  public async getFirst(search: string): Promise<GeonamesLocation> {
     let geonamesLocation = {
       city: undefined,
       code: undefined,
@@ -42,8 +42,34 @@ export class GeonamesClientService {
     return geonamesLocation;
   }
 
+  public async getSearch(search: string): Promise<GeonamesLocation[]> {
+    const locations = [];
+
+    try {
+      const results = await this.getResults(search);
+
+      if (results && results.geonames && results.geonames.length > 0) {
+        results.geonames.map(location => {
+          locations.push({
+            city: location.name,
+            code: location.countryCode,
+            country: location.countryName,
+            latitude: Number(location.lat),
+            longitude: Number(location.lng),
+            province: location.adminCode1,
+          });
+        });
+      }
+    } catch (e) {
+      Logger.error(e);
+    }
+
+    return locations;
+  }
+
   private getResults(search: string): Promise<any> {
     const query = queryString.stringify({
+      cities: 'cities5000',
       username: this.username,
       q: search,
     });
