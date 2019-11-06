@@ -4,4 +4,5 @@ export interface GeonamesLocation {
   country?: string;
   latitude?: number;
   longitude?: number;
+  province?: string;
 }
