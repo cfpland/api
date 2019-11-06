@@ -29,7 +29,10 @@ export class AddLocationsController {
           const locationObj = await this.getLocation(conference.location);
           const partialConference = {
             providerId: conference.providerId,
-            country: locationObj.country.name,
+            city: locationObj.city,
+            country: locationObj.country,
+            latitude: locationObj.latitude,
+            longitude: locationObj.longitude,
             region: locationObj.region,
             subregion: locationObj.subregion,
           } as Partial<ConferenceDto>;

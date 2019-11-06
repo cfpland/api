@@ -7,6 +7,7 @@ export interface ConferenceDto {
   cfp_due_date?: Date;
   cfp_start_date?: Date;
   cfp_url?: string;
+  city?: string;
   created_date?: Date;
   country?: string;
   description?: string;
@@ -15,7 +16,9 @@ export interface ConferenceDto {
   event_url?: string;
   icon?: any;
   is_new?: boolean;
+  latitude?: number;
   location?: string;
+  longitude?: number;
   name: string;
   provider: string;
   providerId?: string;
