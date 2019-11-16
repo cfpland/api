@@ -1,4 +1,4 @@
-import { IsOptional, IsString, ValidateNested } from 'class-validator';
+import { IsJSON, IsOptional, IsString, ValidateNested } from 'class-validator';
 import { UserCommunicationPreferencesDto } from './user-communication-preferences.dto';
 import { Type } from 'class-transformer';
 
@@ -22,6 +22,10 @@ export class UpdateUserDto {
   @IsOptional()
   @IsString()
   location?: string;
+
+  @IsOptional()
+  @IsString()
+  locationPoint?: string;
 
   @IsOptional()
   @IsString()
