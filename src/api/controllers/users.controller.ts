@@ -7,7 +7,7 @@ import {
   Req,
   Headers,
   UnauthorizedException,
-  UseGuards,
+  UseGuards, UseInterceptors,
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { Observable, of } from 'rxjs';
@@ -20,6 +20,7 @@ import { UserService } from '../../data-access/users/services/user.service';
 import { SearchService } from '../../data-access/searches/services/search.service';
 import { ConfigService } from '../../config/config.service';
 import { MoonclerkCustomer } from '../../data-access/users/clients/moonclerk-customer.interface';
+import { LocationPointInterceptor } from '../interceptors/location-point.interceptor';
 
 @Controller('v0')
 export class UsersController {
@@ -31,6 +32,7 @@ export class UsersController {
 
   @Get('me')
   @UseGuards(AuthGuard('bearer'))
+  @UseInterceptors(LocationPointInterceptor)
   public getMe(@Req() request: RequestWithUser): Observable<User> {
     return of(request.user);
   }

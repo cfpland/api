@@ -65,7 +65,7 @@ export class User {
     type: 'point',
     nullable: true,
   })
-  locationPoint: string;
+  locationPoint: any;
 
   @Column({
     type: 'json',

@@ -25,6 +25,10 @@ export class UpdateUserDto {
 
   @IsOptional()
   @IsString()
+  locationPoint?: string;
+
+  @IsOptional()
+  @IsString()
   speakingGoal?: string;
 
   @IsOptional()
