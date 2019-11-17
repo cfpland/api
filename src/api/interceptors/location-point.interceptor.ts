@@ -23,6 +23,10 @@ export class LocationPointInterceptor implements NestInterceptor<Response> {
   }
 
   private getLocationPointString(user: User): string {
-    return user.locationPoint.x + ',' + user.locationPoint.y;
+    return (
+      user && user.locationPoint &&
+      user.locationPoint.x &&
+      user.locationPoint.y
+    ) ? user.locationPoint.x + ',' + user.locationPoint.y : null;
   }
 }
