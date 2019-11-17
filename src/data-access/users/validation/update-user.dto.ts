@@ -1,4 +1,4 @@
-import { IsJSON, IsOptional, IsString, ValidateNested } from 'class-validator';
+import { IsOptional, IsString, ValidateNested } from 'class-validator';
 import { UserCommunicationPreferencesDto } from './user-communication-preferences.dto';
 import { Type } from 'class-transformer';
 
