@@ -31,7 +31,8 @@ export class UserService {
     private readonly userAccountRepository: Repository<UserAccount>,
     private readonly moonclerkApiClient: MoonclerkApiClientService,
     private readonly config: ConfigService,
-  ) {}
+  ) {
+  }
 
   public selectBy = (key: string, value: string) => {
     const where = {};
@@ -63,10 +64,12 @@ export class UserService {
         .createQueryBuilder('user')
         .select()
         .leftJoinAndSelect('user.savedConferences', 'savedConferences')
+        .leftJoinAndSelect('user.userAccounts', 'userAccounts')
+        .leftJoinAndSelect('userAccounts.account', 'account')
         .where(
           `user.communicationPreferences ::jsonb @> \'{"savedConferences":true}\'`,
         )
-        .where('user.accountLevel = :accountLevel', { accountLevel: 'pro' })
+        .where('account.type = :accountType', { accountType: 'pro' })
         .getMany(),
     ).pipe(map(collect));
   };
@@ -79,10 +82,12 @@ export class UserService {
         .createQueryBuilder('user')
         .select()
         .leftJoinAndSelect('user.searches', 'searches')
+        .leftJoinAndSelect('user.userAccounts', 'userAccounts')
+        .leftJoinAndSelect('userAccounts.account', 'account')
         .where(
           `user.communicationPreferences ::jsonb @> \'{"savedSearches":true}\'`,
         )
-        .where('user.accountLevel = :accountLevel', { accountLevel: 'pro' })
+        .where('account.type = :accountType', { accountType: 'pro' })
         .getMany(),
     ).pipe(map(collect));
   };
@@ -95,10 +100,12 @@ export class UserService {
         .createQueryBuilder('user')
         .select()
         .leftJoinAndSelect('user.savedConferences', 'savedConferences')
+        .leftJoinAndSelect('user.userAccounts', 'userAccounts')
+        .leftJoinAndSelect('userAccounts.account', 'account')
         .where(
           `user.communicationPreferences ::jsonb @> \'{"weeklySummary":true}\'`,
         )
-        .where('user.accountLevel = :accountLevel', { accountLevel: 'pro' })
+        .where('account.type = :accountType', { accountType: 'pro' })
         .getMany(),
     ).pipe(map(collect));
   };
