@@ -86,19 +86,20 @@ export const weeklyMjmlTemplate = `<mjml>
     </mj-section>
     {{/each}}
     
-    <!-- Pro -->
+    <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
       <mj-column width="32%">
-        <mj-image href="https://pro.cfpland.com/" align="center" src="https://i.imgur.com/LUVnO8u.png?1"></mj-image>
+        <mj-image href="https://academy.infinite.red/courses/beginning-machine-learning-with-tensorflow-js?affcode=396307_0itieflk" align="center" src="https://i.imgur.com/URa5oc1.jpg?1"></mj-image>
       </mj-column>
       <mj-column width="68%">
         <mj-text font-weight="bold">
-          <a href="https://pro.cfpland.com/">Upgrade to CFP Land Pro</a>
+          <a href="https://academy.infinite.red/courses/beginning-machine-learning-with-tensorflow-js?affcode=396307_0itieflk">Learn Machine Learning in Javascript</a>
         </mj-text>
         <mj-text color="#666666" font-size="14px" line-height="20px">
-          <strong>Reach your speaking goals faster:</strong> Pro users get submission tracking, extra alerts, and access to CFPs 3 weeks before free users see them.
+          Want a job in 2025? Start learning about AI now. You don't need a PhD, Masters or even four-year degree to successfully apply AI in your work. All you need is a working knowledge of JavaScript.
         </mj-text>
-        <mj-text><a href="https://pro.cfpland.com/">Learn More →</a></mj-text>
+        <mj-text><a href="https://academy.infinite.red/courses/beginning-machine-learning-with-tensorflow-js?affcode=396307_0itieflk">Enroll Today →</a></mj-text>
+        <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
     </mj-section>
 
