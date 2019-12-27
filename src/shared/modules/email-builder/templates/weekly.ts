@@ -54,8 +54,7 @@ export const weeklyMjmlTemplate = `<mjml>
     <!-- Header -->
     <mj-section>
       <mj-column>
-        <mj-image href="https://www.cfpland.com/" align="center" src="https://i.imgur.com/PI3keSl.png" alt="CFP Land Weekly Update" padding-bottom="20px"></mj-image>
-        <mj-text line-height="0px" padding="0px">%opentracker%</mj-text>
+        <mj-image href="https://www.cfpland.com/" align="center" src="https://drive.google.com/uc?id=1kdzltxyMtycKo-RO_08d-PJcKx4GFdh_" alt="CFP Land Weekly Update" padding-bottom="20px"></mj-image>
       </mj-column>
     </mj-section>
 
@@ -64,15 +63,16 @@ export const weeklyMjmlTemplate = `<mjml>
       <mj-column>
         <mj-text font-size="24px" padding-top="10px">📖 Weekly Reading:</mj-text>
         <mj-text font-style="italic" color="#8d8d8d">
-          Weekly interviews with speakers 
+          Weekly advice and interviews with speakers 
           <a style="color:#8d8d8d;text-decoration:underline;" href="https://www.cfpland.com/blog">on the CFP Land blog</a>.
+          %opentracker%
         </mj-text>
       </mj-column>
     </mj-section>
     {{#each blogPosts.items}}
     <!-- Blog Post -->
     <mj-section border-bottom="1px dashed lightgrey">
-      <mj-column width="60%">
+      <mj-column>
         <mj-text line-height="22px">
           <a href="{{this.link}}">{{this.title}}</a>
         </mj-text>
@@ -80,25 +80,24 @@ export const weeklyMjmlTemplate = `<mjml>
           {{this.content}}
         </mj-text>
       </mj-column>
-      <mj-column width="40%">
-        <mj-image href="{{this.link}}" src="{{this.image}}"></mj-image>
-      </mj-column>
     </mj-section>
     {{/each}}
-    
-    <!-- Sponsor -->
+   
+   <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="32%">
-        <mj-image href="https://academy.infinite.red/courses/beginning-machine-learning-with-tensorflow-js?affcode=396307_0itieflk" align="center" src="https://i.imgur.com/URa5oc1.jpg?1"></mj-image>
+      <mj-column width="35%">
+        <mj-image align="center" href="https://www.developer-first.com/event-info/developer-first-conference" src="https://drive.google.com/uc?id=1WZoAxi-9_wa3zSIEgFJvEkuNwsOAYDb1"></mj-image>
       </mj-column>
-      <mj-column width="68%">
+      <mj-column width="65%">
         <mj-text font-weight="bold">
-          <a href="https://academy.infinite.red/courses/beginning-machine-learning-with-tensorflow-js?affcode=396307_0itieflk">Learn Machine Learning in Javascript</a>
+          <a href="https://www.developer-first.com/event-info/developer-first-conference">Are you passionate about the people side of software development?</a>
         </mj-text>
         <mj-text color="#666666" font-size="14px" line-height="20px">
-          Want a job in 2025? Start learning about AI now. You don't need a PhD, Masters or even four-year degree to successfully apply AI in your work. All you need is a working knowledge of JavaScript.
+          Engineering leaders: don’t miss this event! The 2020 Developer First conference is designed to facilitate meaningful conversations and provide tactical strategies for becoming confident and inspiring leaders in tech.
         </mj-text>
-        <mj-text><a href="https://academy.infinite.red/courses/beginning-machine-learning-with-tensorflow-js?affcode=396307_0itieflk">Enroll Today →</a></mj-text>
+        <mj-text>
+          <a href="https://www.developer-first.com/event-info/developer-first-conference">Buy your ticket now! →</a>
+        </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
     </mj-section>
@@ -150,6 +149,21 @@ export const weeklyMjmlTemplate = `<mjml>
     </mj-section>
     {{/if}}{{/each}}
 
+    <!-- Sponsor -->
+    <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
+      <mj-column>
+        <mj-text font-weight="bold">
+          ❤️
+          <a href="https://sponsor.cfpland.com/">Help Support CFP Land</a>
+          ❤️
+        </mj-text>
+        <mj-text color="#666666" font-size="14px" line-height="20px">
+          CFP Land reaches 1500+ conference speakers every week.
+          If your employer would like to support this effort, here's your chance!
+        </mj-text>
+        <mj-text><a href="https://sponsor.cfpland.com/">Sponsor CFP Land →</a></mj-text>
+      </mj-column>
+    </mj-section>
     {{/if}}
     
     <!-- Feed Divider -->

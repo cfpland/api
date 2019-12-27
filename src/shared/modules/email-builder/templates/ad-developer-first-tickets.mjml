@@ -1,0 +1,18 @@
+<!-- Sponsor -->
+<mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
+  <mj-column width="35%">
+    <mj-image align="center" href="https://www.developer-first.com/event-info/developer-first-conference" src="https://i.imgur.com/0j9TSeZ.png"></mj-image>
+  </mj-column>
+  <mj-column width="65%">
+    <mj-text font-weight="bold">
+      <a href="https://www.developer-first.com/event-info/developer-first-conference">Are you passionate about the people side of software development?</a>
+    </mj-text>
+    <mj-text color="#666666" font-size="14px" line-height="20px">
+      Engineering leaders: don’t miss this event! The 2020 Developer First conference is designed to facilitate meaningful conversations and provide tactical strategies for becoming confident and inspiring leaders in tech.
+    </mj-text>
+    <mj-text>
+      <a href="https://www.developer-first.com/event-info/developer-first-conference">Buy your ticket now! →</a>
+    </mj-text>
+    <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
+  </mj-column>
+</mj-section>
