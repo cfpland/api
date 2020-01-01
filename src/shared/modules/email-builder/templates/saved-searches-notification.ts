@@ -46,8 +46,8 @@ export const savedSearchesNotificationTemplate = `<mjml>
     <!-- Header -->
     <mj-section>
       <mj-column>
-        <mj-image href="https://www.cfpland.com/" align="center" src="https://i.imgur.com/PI3keSl.png" alt="CFP Land Weekly Update" padding-bottom="20px"></mj-image>
-        <mj-text line-height="0px" padding="0px">%opentracker%</mj-text>
+        <mj-image href="https://www.cfpland.com/" align="center" src="https://drive.google.com/uc?id=1kdzltxyMtycKo-RO_08d-PJcKx4GFdh_" alt="CFP Land Weekly Update" padding-bottom="20px"></mj-image>
+        <mj-text padding="0px">%opentracker%</mj-text>
       </mj-column>
     </mj-section>
 
