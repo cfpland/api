@@ -82,21 +82,21 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section>
     {{/each}}
-   
-   <!-- Sponsor -->
+    
+    <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="35%">
-        <mj-image align="center" href="https://www.developer-first.com/event-info/developer-first-conference" src="https://drive.google.com/uc?id=1WZoAxi-9_wa3zSIEgFJvEkuNwsOAYDb1"></mj-image>
+      <mj-column width="25%">
+        <mj-image align="center" href="https://www.papercall.io/bifrost-2020" src="https://drive.google.com/uc?id=11gYXupL8uAHquOz5GhOPPyussVkaoMTn"></mj-image>
       </mj-column>
-      <mj-column width="65%">
+      <mj-column width="75%">
         <mj-text font-weight="bold">
-          <a href="https://www.developer-first.com/event-info/developer-first-conference">Are you passionate about the people side of software development?</a>
+          <a href="https://www.papercall.io/bifrost-2020">Bifrost Lead Developer Conference CFP Open</a>
         </mj-text>
         <mj-text color="#666666" font-size="14px" line-height="20px">
-          Engineering leaders: don’t miss this event! The 2020 Developer First conference is designed to facilitate meaningful conversations and provide tactical strategies for becoming confident and inspiring leaders in tech.
+          Bifrost Conference is the place for leaders within the web development sector to come together and share practical and actionable knowledge with their peers. Bifrost conference is back for its 4th year and is looking for amazing speakers like you.
         </mj-text>
         <mj-text>
-          <a href="https://www.developer-first.com/event-info/developer-first-conference">Buy your ticket now! →</a>
+          <a href="https://www.papercall.io/bifrost-2020">Learn more and apply now! →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
@@ -149,19 +149,22 @@ export const weeklyMjmlTemplate = `<mjml>
     </mj-section>
     {{/if}}{{/each}}
 
-    <!-- Sponsor -->
+   <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column>
+      <mj-column width="35%">
+        <mj-image align="center" href="https://www.developer-first.com/event-info/developer-first-conference" src="https://drive.google.com/uc?id=1WZoAxi-9_wa3zSIEgFJvEkuNwsOAYDb1"></mj-image>
+      </mj-column>
+      <mj-column width="65%">
         <mj-text font-weight="bold">
-          ❤️
-          <a href="https://sponsor.cfpland.com/">Help Support CFP Land</a>
-          ❤️
+          <a href="https://www.developer-first.com/event-info/developer-first-conference">Are you passionate about the people side of software development?</a>
         </mj-text>
         <mj-text color="#666666" font-size="14px" line-height="20px">
-          CFP Land reaches 1500+ conference speakers every week.
-          If your employer would like to support this effort, here's your chance!
+          Engineering leaders: don’t miss this event! The 2020 Developer First conference is designed to facilitate meaningful conversations and provide tactical strategies for becoming confident and inspiring leaders in tech.
         </mj-text>
-        <mj-text><a href="https://sponsor.cfpland.com/">Sponsor CFP Land →</a></mj-text>
+        <mj-text>
+          <a href="https://www.developer-first.com/event-info/developer-first-conference">Buy your ticket now! →</a>
+        </mj-text>
+        <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
     </mj-section>
     {{/if}}
