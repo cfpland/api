@@ -72,7 +72,7 @@ export const weeklyMjmlTemplate = `<mjml>
     {{#each blogPosts.items}}
     <!-- Blog Post -->
     <mj-section border-bottom="1px dashed lightgrey">
-      <mj-column>
+      <mj-column width="60%">
         <mj-text line-height="22px">
           <a href="{{this.link}}">{{this.title}}</a>
         </mj-text>
@@ -80,27 +80,31 @@ export const weeklyMjmlTemplate = `<mjml>
           {{this.content}}
         </mj-text>
       </mj-column>
+      <mj-column width="40%">
+        <mj-image href="{{this.link}}" src="{{this.image}}"></mj-image>
+      </mj-column>
     </mj-section>
     {{/each}}
     
     <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
       <mj-column width="25%">
-        <mj-image align="center" href="https://www.papercall.io/bifrost-2020" src="https://drive.google.com/uc?id=11gYXupL8uAHquOz5GhOPPyussVkaoMTn"></mj-image>
+        <mj-image align="center" href="https://chefconf.io/speak" src="https://drive.google.com/uc?id=16Mr9gTESBsdos5HnibeefYMLc6M64Tk5"></mj-image>
       </mj-column>
       <mj-column width="75%">
         <mj-text font-weight="bold">
-          <a href="https://www.papercall.io/bifrost-2020">Bifrost Lead Developer Conference CFP Open</a>
+          <a href="https://chefconf.io/speak">ChefConf 2020 CFP Due Soon</a>
         </mj-text>
         <mj-text color="#666666" font-size="14px" line-height="20px">
-          Bifrost Conference is the place for leaders within the web development sector to come together and share practical and actionable knowledge with their peers. Bifrost conference is back for its 4th year and is looking for amazing speakers like you.
+          ChefConf 2020 will be the premier venue for forward-thinking IT professionals working towards digital transformation, and <strong>they want to hear from you</strong>. Share your story of automating legacy applications, building learning organizations, leveraging cloud services, automating all the things, and more.
         </mj-text>
         <mj-text>
-          <a href="https://www.papercall.io/bifrost-2020">Learn more and apply now! →</a>
+          <a href="https://chefconf.io/speak">Learn more and apply now! →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
     </mj-section>
+
 
     {{#if conferences.items.0.preferred}}
     <!-- Feed Divider -->
