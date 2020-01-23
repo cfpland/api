@@ -88,23 +88,22 @@ export const weeklyMjmlTemplate = `<mjml>
     
     <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="25%">
-        <mj-image align="center" href="https://chefconf.io/speak" src="https://drive.google.com/uc?id=16Mr9gTESBsdos5HnibeefYMLc6M64Tk5"></mj-image>
+      <mj-column width="35%">
+        <mj-image align="center" href="https://www.developer-first.com/event-info/developer-first-conference" src="https://drive.google.com/uc?id=1WZoAxi-9_wa3zSIEgFJvEkuNwsOAYDb1"></mj-image>
       </mj-column>
-      <mj-column width="75%">
+      <mj-column width="65%">
         <mj-text font-weight="bold">
-          <a href="https://chefconf.io/speak">ChefConf 2020 CFP Due Soon</a>
+          <a href="https://www.developer-first.com/event-info/developer-first-conference">Are you passionate about the people side of software development?</a>
         </mj-text>
         <mj-text color="#666666" font-size="14px" line-height="20px">
-          ChefConf 2020 will be the premier venue for forward-thinking IT professionals working towards digital transformation, and <strong>they want to hear from you</strong>. Share your story of automating legacy applications, building learning organizations, leveraging cloud services, automating all the things, and more.
+          Engineering leaders: don’t miss this event! The 2020 Developer First conference is designed to facilitate meaningful conversations and provide tactical strategies for becoming confident and inspiring leaders in tech.
         </mj-text>
         <mj-text>
-          <a href="https://chefconf.io/speak">Learn more and apply now! →</a>
+          <a href="https://www.developer-first.com/event-info/developer-first-conference">Buy your ticket now! →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
     </mj-section>
-
 
     {{#if conferences.items.0.preferred}}
     <!-- Feed Divider -->
@@ -153,24 +152,6 @@ export const weeklyMjmlTemplate = `<mjml>
     </mj-section>
     {{/if}}{{/each}}
 
-   <!-- Sponsor -->
-    <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="35%">
-        <mj-image align="center" href="https://www.developer-first.com/event-info/developer-first-conference" src="https://drive.google.com/uc?id=1WZoAxi-9_wa3zSIEgFJvEkuNwsOAYDb1"></mj-image>
-      </mj-column>
-      <mj-column width="65%">
-        <mj-text font-weight="bold">
-          <a href="https://www.developer-first.com/event-info/developer-first-conference">Are you passionate about the people side of software development?</a>
-        </mj-text>
-        <mj-text color="#666666" font-size="14px" line-height="20px">
-          Engineering leaders: don’t miss this event! The 2020 Developer First conference is designed to facilitate meaningful conversations and provide tactical strategies for becoming confident and inspiring leaders in tech.
-        </mj-text>
-        <mj-text>
-          <a href="https://www.developer-first.com/event-info/developer-first-conference">Buy your ticket now! →</a>
-        </mj-text>
-        <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
-      </mj-column>
-    </mj-section>
     {{/if}}
     
     <!-- Feed Divider -->
