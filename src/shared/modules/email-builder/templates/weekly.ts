@@ -72,16 +72,13 @@ export const weeklyMjmlTemplate = `<mjml>
     {{#each blogPosts.items}}
     <!-- Blog Post -->
     <mj-section border-bottom="1px dashed lightgrey">
-      <mj-column width="60%">
+      <mj-column>
         <mj-text line-height="22px">
           <a href="{{this.link}}">{{this.title}}</a>
         </mj-text>
         <mj-text color="#666666" line-height="20px">
           {{this.content}}
         </mj-text>
-      </mj-column>
-      <mj-column width="40%">
-        <mj-image href="{{this.link}}" src="{{this.image}}"></mj-image>
       </mj-column>
     </mj-section>
     {{/each}}
