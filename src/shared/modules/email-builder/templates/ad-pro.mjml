@@ -5,11 +5,13 @@
   </mj-column>
   <mj-column width="68%">
     <mj-text font-weight="bold">
-      <a href="https://pro.cfpland.com/">Upgrade to CFP Land Pro</a>
+      <a href="https://pro.cfpland.com/">Support CFP Land: Go Pro</a>
     </mj-text>
     <mj-text color="#666666" font-size="14px" line-height="20px">
-      <strong>Reach your speaking goals faster:</strong> Pro users get submission tracking, extra alerts, and access to CFPs 3 weeks before free users see them.
+      Since I started CFP Land in 2017, it's helped over 2000 tech conference speakers find new opportunities through
+      the free newsletter and tools. Along the way, dozens of subscribers have offered to help, and now here's your
+      chance to contribute.
     </mj-text>
-    <mj-text><a href="https://pro.cfpland.com/">Learn More →</a></mj-text>
+    <mj-text><a href="https://pro.cfpland.com/">Become a Pro Member →</a></mj-text>
   </mj-column>
 </mj-section>

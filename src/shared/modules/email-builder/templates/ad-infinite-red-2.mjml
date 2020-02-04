@@ -1,0 +1,18 @@
+<!-- Sponsor -->
+<mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
+  <mj-column width="50%">
+    <mj-image align="center" clicktracking=off href="https://sessionize.com/chain-react-2020/?utm_source=CFPLand&utm_medium=newsletter&utm_campaign=ChainReact2020" src="https://drive.google.com/uc?id=1e-hYANb0joU_xIjidenvvXkFqiAWB2HE"></mj-image>
+  </mj-column>
+  <mj-column width="50%">
+    <mj-text font-weight="bold" line-height="22px">
+      <a clicktracking=off href="https://sessionize.com/chain-react-2020/?utm_source=CFPLand&utm_medium=newsletter&utm_campaign=ChainReact2020">Show off your React Native chops. Submit to speak at Chain React 2020.</a>
+    </mj-text>
+    <mj-text color="#666666" font-size="14px" line-height="20px">
+      Have you done something cool with React Native? Join us as a speaker at Chain React 2020, the US React Native conference. Share your knowledge with 500+ developers from all over the world. 🙌 Seeking beginner through advanced React Native topics. ⚛️
+    </mj-text>
+    <mj-text>
+      <a clicktracking=off href="https://sessionize.com/chain-react-2020/?utm_source=CFPLand&utm_medium=newsletter&utm_campaign=ChainReact2020">Submit by 3/13/2020 →</a>
+    </mj-text>
+    <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
+  </mj-column>
+</mj-section>

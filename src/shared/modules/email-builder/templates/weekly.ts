@@ -85,22 +85,23 @@ export const weeklyMjmlTemplate = `<mjml>
     
     <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="35%">
-        <mj-image align="center" href="https://www.developer-first.com/event-info/developer-first-conference" src="https://drive.google.com/uc?id=1WZoAxi-9_wa3zSIEgFJvEkuNwsOAYDb1"></mj-image>
+      <mj-column width="50%">
+        <mj-image align="center" clicktracking=off href="https://sessionize.com/chain-react-2020/?utm_source=CFPLand&utm_medium=newsletter&utm_campaign=ChainReact2020" src="https://drive.google.com/uc?id=1e-hYANb0joU_xIjidenvvXkFqiAWB2HE"></mj-image>
       </mj-column>
-      <mj-column width="65%">
-        <mj-text font-weight="bold">
-          <a href="https://www.developer-first.com/event-info/developer-first-conference">Are you passionate about the people side of software development?</a>
+      <mj-column width="50%">
+        <mj-text font-weight="bold" line-height="22px">
+          <a clicktracking=off href="https://sessionize.com/chain-react-2020/?utm_source=CFPLand&utm_medium=newsletter&utm_campaign=ChainReact2020">Show off your React Native chops. Submit to speak at Chain React 2020.</a>
         </mj-text>
         <mj-text color="#666666" font-size="14px" line-height="20px">
-          Engineering leaders: don’t miss this event! The 2020 Developer First conference is designed to facilitate meaningful conversations and provide tactical strategies for becoming confident and inspiring leaders in tech.
+          Have you done something cool with React Native? Join us as a speaker at Chain React 2020, the US React Native conference. Share your knowledge with 500+ developers from all over the world. 🙌 Seeking beginner through advanced React Native topics. ⚛️
         </mj-text>
         <mj-text>
-          <a href="https://www.developer-first.com/event-info/developer-first-conference">Buy your ticket now! →</a>
+          <a clicktracking=off href="https://sessionize.com/chain-react-2020/?utm_source=CFPLand&utm_medium=newsletter&utm_campaign=ChainReact2020">Submit by 3/13/2020 →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
     </mj-section>
+
 
     {{#if conferences.items.0.preferred}}
     <!-- Feed Divider -->
@@ -148,6 +149,24 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section>
     {{/if}}{{/each}}
+    
+    <!-- Pro -->
+    <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
+      <mj-column width="32%">
+        <mj-image href="https://pro.cfpland.com/" align="center" src="https://drive.google.com/uc?id=1J9a5qMxy0JRWdILGFgedKQZJ41qOfd1u"></mj-image>
+      </mj-column>
+      <mj-column width="68%">
+        <mj-text font-weight="bold">
+          <a href="https://pro.cfpland.com/">Support CFP Land: Go Pro</a>
+        </mj-text>
+        <mj-text color="#666666" font-size="14px" line-height="20px">
+          Since I started CFP Land in 2017, it's helped over 2000 tech conference speakers find new opportunities through
+          the free newsletter and tools. Along the way, dozens of subscribers have offered to help, and now here's your 
+          chance to contribute.
+        </mj-text>
+        <mj-text><a href="https://pro.cfpland.com/">Become a Pro Member →</a></mj-text>
+      </mj-column>
+    </mj-section>
 
     {{/if}}
     
@@ -229,7 +248,7 @@ export const weeklyMjmlTemplate = `<mjml>
           <a clicktracking=off href="{{ subscriber.unsubscribeLink }}">Unsubscribe</a> or
           <a clicktracking=off href="{{ subscriber.profileLink }}">update your preferences</a>.
           <br/>
-          © 2019, <a href="https://www.cfpland.com">CFP Land</a>.
+          © 2020, <a href="https://www.cfpland.com">CFP Land</a>.
           Created by <a href="https://www.portablecto.com">Portable CTO, LLC</a>.
         </mj-text>
       </mj-column>
