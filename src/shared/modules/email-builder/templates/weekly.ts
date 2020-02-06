@@ -153,18 +153,18 @@ export const weeklyMjmlTemplate = `<mjml>
     <!-- Pro -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
       <mj-column width="32%">
-        <mj-image href="https://pro.cfpland.com/" align="center" src="https://drive.google.com/uc?id=1J9a5qMxy0JRWdILGFgedKQZJ41qOfd1u"></mj-image>
+        <mj-image href="https://www.cfpland.com/members/" align="center" src="https://drive.google.com/uc?id=1J9a5qMxy0JRWdILGFgedKQZJ41qOfd1u"></mj-image>
       </mj-column>
       <mj-column width="68%">
         <mj-text font-weight="bold">
-          <a href="https://pro.cfpland.com/">Support CFP Land: Go Pro</a>
+          <a href="https://www.cfpland.com/members/">Support CFP Land: Go Pro</a>
         </mj-text>
         <mj-text color="#666666" font-size="14px" line-height="20px">
           Since I started CFP Land in 2017, it's helped over 2000 tech conference speakers find new opportunities through
           the free newsletter and tools. Along the way, dozens of subscribers have offered to help, and now here's your 
           chance to contribute.
         </mj-text>
-        <mj-text><a href="https://pro.cfpland.com/">Become a Pro Member →</a></mj-text>
+        <mj-text><a href="https://www.cfpland.com/members/">Become a Pro Member →</a></mj-text>
       </mj-column>
     </mj-section>
 
@@ -235,7 +235,7 @@ export const weeklyMjmlTemplate = `<mjml>
             <a clicktracking=off href="{{ subscriber.profileLink }}">Preferences</a> |
             <a href="https://www.cfpland.com/submit">Submit a Conference</a> |
             <a href="https://sponsor.cfpland.com/">Sponsor</a> |
-            <a clicktracking=off href="https://pro.cfpland.com/?utm_source=email&utm_campaign=weekly-newsletter&utm_content=bottom">CFP Land Pro</a>
+            <a clicktracking=off href="https://www.cfpland.com/members/">CFP Land Pro</a>
         </mj-text>
       </mj-column>
     </mj-section>
