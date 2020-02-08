@@ -160,9 +160,9 @@ export const weeklyMjmlTemplate = `<mjml>
           <a href="https://www.cfpland.com/members/">Support CFP Land: Go Pro</a>
         </mj-text>
         <mj-text color="#666666" font-size="14px" line-height="20px">
-          Since I started CFP Land in 2017, it's helped over 2000 tech conference speakers find new opportunities through
-          the free newsletter and tools. Along the way, dozens of subscribers have offered to help, and now here's your 
-          chance to contribute.
+          Since I started CFP Land in 2017, I've collected and shared over 1000 tech conference CFPs with subscribers for 
+           free. Along the way, dozens of subscribers have offered to help, and now here's your 
+          chance to help keep the newsletter going.
         </mj-text>
         <mj-text><a href="https://www.cfpland.com/members/">Become a Pro Member →</a></mj-text>
       </mj-column>
