@@ -1,5 +1,5 @@
 /* tslint:disable:variable-name*/
-import { IsBoolean, IsOptional, IsString } from 'class-validator';
+import { IsBooleanString, IsOptional, IsString } from 'class-validator';
 
 export class SearchOptionsDto {
   @IsOptional()
@@ -11,15 +11,15 @@ export class SearchOptionsDto {
   public region?: string;
 
   @IsOptional()
-  @IsBoolean()
+  @IsBooleanString()
   public hotel_covered?: boolean;
 
   @IsOptional()
-  @IsBoolean()
+  @IsBooleanString()
   public travel_covered?: boolean;
 
   @IsOptional()
-  @IsBoolean()
+  @IsBooleanString()
   public stipend_covered?: boolean;
 
   @IsOptional()
