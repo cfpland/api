@@ -14,7 +14,6 @@ import { AbstractsController } from './controllers/abstracts.controller';
 import { TrackedConferencesController } from './controllers/tracked-conferences.controller';
 import { EmailTrackingController } from './controllers/email-tracking.controller';
 import { LocationsController } from './controllers/locations.controller';
-import { LocationPointInterceptor } from './interceptors/location-point.interceptor';
 
 @Module({
   controllers: [
@@ -47,7 +46,6 @@ import { LocationPointInterceptor } from './interceptors/location-point.intercep
     OptionalAuthGuard,
     ConferenceCacheInterceptor,
     ConferenceDatesInterceptor,
-    LocationPointInterceptor,
   ],
 })
 export class ApiModule {}
