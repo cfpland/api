@@ -83,22 +83,19 @@ export const weeklyMjmlTemplate = `<mjml>
     </mj-section>
     {{/each}}
     
-    <!-- Sponsor -->
+    <!-- Pro -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="50%">
-        <mj-image align="center" clicktracking=off href="https://sessionize.com/chain-react-2020/?utm_source=CFPLand&utm_medium=newsletter&utm_campaign=ChainReact2020" src="https://drive.google.com/uc?id=1e-hYANb0joU_xIjidenvvXkFqiAWB2HE"></mj-image>
+      <mj-column width="32%">
+        <mj-image href="https://www.cfpland.com/members/" align="center" src="https://drive.google.com/uc?id=1J9a5qMxy0JRWdILGFgedKQZJ41qOfd1u"></mj-image>
       </mj-column>
-      <mj-column width="50%">
-        <mj-text font-weight="bold" line-height="22px">
-          <a clicktracking=off href="https://sessionize.com/chain-react-2020/?utm_source=CFPLand&utm_medium=newsletter&utm_campaign=ChainReact2020">Show off your React Native chops. Submit to speak at Chain React 2020.</a>
+      <mj-column width="68%">
+        <mj-text font-weight="bold">
+          <a href="https://www.cfpland.com/members/">Take Your Speaking to the Next Level with CFP Land Pro</a>
         </mj-text>
         <mj-text color="#666666" font-size="14px" line-height="20px">
-          Have you done something cool with React Native? Join us as a speaker at Chain React 2020, the US React Native conference. Share your knowledge with 500+ developers from all over the world. 🙌 Seeking beginner through advanced React Native topics. ⚛️
+          Help support CFP Land, get early access to speaking opportunities, manage your abstracts and submissions, and more. See if CFP Land Pro is right for you!
         </mj-text>
-        <mj-text>
-          <a clicktracking=off href="https://sessionize.com/chain-react-2020/?utm_source=CFPLand&utm_medium=newsletter&utm_campaign=ChainReact2020">Submit by 3/13/2020 →</a>
-        </mj-text>
-        <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
+        <mj-text><a href="https://www.cfpland.com/members/">Learn More →</a></mj-text>
       </mj-column>
     </mj-section>
 
@@ -149,24 +146,6 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section>
     {{/if}}{{/each}}
-    
-    <!-- Pro -->
-    <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="32%">
-        <mj-image href="https://www.cfpland.com/members/" align="center" src="https://drive.google.com/uc?id=1J9a5qMxy0JRWdILGFgedKQZJ41qOfd1u"></mj-image>
-      </mj-column>
-      <mj-column width="68%">
-        <mj-text font-weight="bold">
-          <a href="https://www.cfpland.com/members/">Support CFP Land: Go Pro</a>
-        </mj-text>
-        <mj-text color="#666666" font-size="14px" line-height="20px">
-          Since I started CFP Land in 2017, I've collected and shared over 1000 tech conference CFPs with subscribers for 
-           free. Along the way, dozens of subscribers have offered to help, and now here's your 
-          chance to help keep the newsletter going.
-        </mj-text>
-        <mj-text><a href="https://www.cfpland.com/members/">Become a Pro Member →</a></mj-text>
-      </mj-column>
-    </mj-section>
 
     {{/if}}
     
