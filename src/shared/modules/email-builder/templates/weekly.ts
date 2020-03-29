@@ -82,23 +82,24 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section>
     {{/each}}
-    
-    <!-- Pro -->
+    <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="32%">
-        <mj-image href="https://www.cfpland.com/members/" align="center" src="https://drive.google.com/uc?id=1J9a5qMxy0JRWdILGFgedKQZJ41qOfd1u"></mj-image>
+      <mj-column width="50%">
+        <mj-image align="center" href="https://www.hiredevrels.com/" src="https://drive.google.com/uc?id=1i3VMx4pMT6zcGQ2kAXFz21woV_iR3hnk"></mj-image>
       </mj-column>
-      <mj-column width="68%">
-        <mj-text font-weight="bold">
-          <a href="https://www.cfpland.com/members/">Take Your Speaking to the Next Level with CFP Land Pro</a>
+      <mj-column width="50%">
+        <mj-text font-weight="bold" line-height="22px">
+          <a href="https://www.hiredevrels.com/">Looking for a #DevRel job?</a>
         </mj-text>
         <mj-text color="#666666" font-size="14px" line-height="20px">
-          Help support CFP Land, get early access to speaking opportunities, manage your abstracts and submissions, and more. See if CFP Land Pro is right for you!
+          👈 If you're looking for a job in developer relations or Coronavirus has you worried,
+          sign up to get my NEW weekly email full of jobs especially for tech speakers.
         </mj-text>
-        <mj-text><a href="https://www.cfpland.com/members/">Learn More →</a></mj-text>
+        <mj-text>
+          <a href="https://www.hiredevrels.com/">Sign up today! →</a>
+        </mj-text>
       </mj-column>
     </mj-section>
-
 
     {{#if conferences.items.0.preferred}}
     <!-- Feed Divider -->
