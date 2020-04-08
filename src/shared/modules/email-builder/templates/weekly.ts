@@ -82,24 +82,27 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section>
     {{/each}}
+    
     <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="50%">
-        <mj-image align="center" href="https://www.hiredevrels.com/" src="https://drive.google.com/uc?id=1i3VMx4pMT6zcGQ2kAXFz21woV_iR3hnk"></mj-image>
+      <mj-column width="30%">
+        <mj-image align="center" href="https://containercamp.typeform.com/to/P7EG6i" src="https://drive.google.com/uc?id=1pi7jxwdHEuBqdT94RIyZfv2ZJ48SSbeH"></mj-image>
       </mj-column>
-      <mj-column width="50%">
-        <mj-text font-weight="bold" line-height="22px">
-          <a href="https://www.hiredevrels.com/">Looking for a #DevRel job?</a>
+      <mj-column width="70%">
+        <mj-text font-weight="bold">
+          <a href="https://containercamp.typeform.com/to/P7EG6i">Container Camp Wants Speakers Like You</a>
         </mj-text>
         <mj-text color="#666666" font-size="14px" line-height="20px">
-          👈 If you're looking for a job in developer relations or Coronavirus has you worried,
-          sign up to get my NEW weekly email full of jobs especially for tech speakers.
+          If you're passionate about containers and pushing the boundaries of what they can do then Container Camp
+          has a perfect CFP for you!
         </mj-text>
         <mj-text>
-          <a href="https://www.hiredevrels.com/">Sign up today! →</a>
+          <a href="https://containercamp.typeform.com/to/P7EG6i">Apply by April 20th →</a>
         </mj-text>
+        <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
     </mj-section>
+
 
     {{#if conferences.items.0.preferred}}
     <!-- Feed Divider -->
