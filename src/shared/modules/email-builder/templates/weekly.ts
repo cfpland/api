@@ -61,46 +61,26 @@ export const weeklyMjmlTemplate = `<mjml>
     <!-- Feed Divider -->
     <mj-section>
       <mj-column>
-        <mj-text font-size="24px" padding-top="10px">📖 Weekly Reading:</mj-text>
-        <mj-text font-style="italic" color="#8d8d8d">
-          Weekly advice and interviews with speakers 
-          <a style="color:#8d8d8d;text-decoration:underline;" href="https://www.cfpland.com/blog">on the CFP Land blog</a>.
-          %opentracker%
-        </mj-text>
+        <mj-text font-size="24px" padding-top="10px">📰 Brief Updates %opentracker%</mj-text>
       </mj-column>
     </mj-section>
     {{#each blogPosts.items}}
     <!-- Blog Post -->
     <mj-section border-bottom="1px dashed lightgrey">
-      <mj-column>
+      <mj-column width="70%">
         <mj-text line-height="22px">
           <a href="{{this.link}}">{{this.title}}</a>
         </mj-text>
         <mj-text color="#666666" line-height="20px">
-          {{this.content}}
+          {{this.content}}<br/><br/>
+          Now back to your regularly scheduled CFPs...😁
         </mj-text>
+      </mj-column>
+      <mj-column width="30%">
+        <mj-image align="center" href="{{this.link}}" src="https://drive.google.com/uc?id=1gRizHbENbw2_kiHGi0fn08WRwsFmtKBL"></mj-image>
       </mj-column>
     </mj-section>
     {{/each}}
-    
-    <!-- Sponsor -->
-    <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="50%">
-        <mj-image align="center" href="https://www.hiredevrels.com/" src="https://drive.google.com/uc?id=1i3VMx4pMT6zcGQ2kAXFz21woV_iR3hnk"></mj-image>
-      </mj-column>
-      <mj-column width="50%">
-        <mj-text font-weight="bold" line-height="22px">
-          <a href="https://www.hiredevrels.com/">Looking for a #DevRel job?</a>
-        </mj-text>
-        <mj-text color="#666666" font-size="14px" line-height="20px">
-          👈 If you're looking for a job in developer relations or Coronavirus has you worried,
-          sign up to get my NEW weekly email full of jobs especially for tech speakers!
-        </mj-text>
-        <mj-text>
-          <a href="https://www.hiredevrels.com/">Sign up today →</a>
-        </mj-text>
-      </mj-column>
-    </mj-section>
 
     {{#if conferences.items.0.preferred}}
     <!-- Feed Divider -->
