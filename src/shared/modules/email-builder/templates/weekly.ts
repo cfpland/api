@@ -61,23 +61,19 @@ export const weeklyMjmlTemplate = `<mjml>
     <!-- Feed Divider -->
     <mj-section>
       <mj-column>
-        <mj-text font-size="24px" padding-top="10px">📰 Brief Updates %opentracker%</mj-text>
+        <mj-text font-size="24px" padding-top="10px">📰 Weekly Reading %opentracker%</mj-text>
       </mj-column>
     </mj-section>
     {{#each blogPosts.items}}
     <!-- Blog Post -->
     <mj-section border-bottom="1px dashed lightgrey">
-      <mj-column width="70%">
+      <mj-column>
         <mj-text line-height="22px">
           <a href="{{this.link}}">{{this.title}}</a>
         </mj-text>
         <mj-text color="#666666" line-height="20px">
-          {{this.content}}<br/><br/>
-          Now back to your regularly scheduled CFPs...😁
+          {{this.content}}
         </mj-text>
-      </mj-column>
-      <mj-column width="30%">
-        <mj-image align="center" href="{{this.link}}" src="https://drive.google.com/uc?id=1gRizHbENbw2_kiHGi0fn08WRwsFmtKBL"></mj-image>
       </mj-column>
     </mj-section>
     {{/each}}
