@@ -57,26 +57,25 @@ export const weeklyMjmlTemplate = `<mjml>
         <mj-image href="https://www.cfpland.com/" align="center" src="https://drive.google.com/uc?id=1kdzltxyMtycKo-RO_08d-PJcKx4GFdh_" alt="CFP Land Weekly Update" padding-bottom="20px"></mj-image>
       </mj-column>
     </mj-section>
-
-    <!-- Feed Divider -->
-    <mj-section>
-      <mj-column>
-        <mj-text font-size="24px" padding-top="10px">📰 Weekly Reading %opentracker%</mj-text>
+    
+    <!-- Sponsor: Draft -->
+    <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
+      <mj-column width="30%">
+        <mj-image align="center" href="https://draft.dev/" src="https://drive.google.com/uc?id=1qlldMq884v-DGyQLVHMP7mM36ZEetXFX"></mj-image>
+      </mj-column>
+      <mj-column width="70%">
+        <mj-text font-weight="bold" line-height="24px">
+          <a href="https://draft.dev/">Technical Blog Posts Done For You</a>
+        </mj-text>
+        <mj-text color="#666666" font-size="16px" line-height="20px">
+          Don't let your blog languish because none of your engineers have time to contribute. Let Draft handle the writing for you.
+        </mj-text>
+        <mj-text>
+          <a href="https://draft.dev/">Learn more →</a>
+        </mj-text>
+        <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
     </mj-section>
-    {{#each blogPosts.items}}
-    <!-- Blog Post -->
-    <mj-section border-bottom="1px dashed lightgrey">
-      <mj-column>
-        <mj-text line-height="22px">
-          <a href="{{this.link}}">{{this.title}}</a>
-        </mj-text>
-        <mj-text color="#666666" line-height="20px">
-          {{this.content}}
-        </mj-text>
-      </mj-column>
-    </mj-section>
-    {{/each}}
 
     {{#if conferences.items.0.preferred}}
     <!-- Feed Divider -->
