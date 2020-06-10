@@ -65,10 +65,10 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
       <mj-column width="70%">
         <mj-text font-weight="bold" line-height="24px">
-          <a href="https://draft.dev/">Technical Blog Posts Done For You</a>
+          <a href="https://draft.dev/">Take Your Blog Up a Notch</a>
         </mj-text>
         <mj-text color="#666666" font-size="16px" line-height="20px">
-          Don't let your blog languish because none of your engineers have time to contribute. Let Draft handle the writing for you.
+          Draft creates high-quality technical content for software engineering blogs. If you're growing a technical blog, we can help.
         </mj-text>
         <mj-text>
           <a href="https://draft.dev/">Learn more →</a>
