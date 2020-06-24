@@ -58,25 +58,25 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section>
     
-    <!-- Weekly Reading -->
-    <mj-section>
-      <mj-column>
-        <mj-text font-size="24px" padding-top="10px">📰 Weekly Reading %opentracker%</mj-text>
+    <!-- Sponsor: Draft -->
+    <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
+      <mj-column width="30%">
+        <mj-image align="center" href="https://draft.dev/#course" src="https://drive.google.com/uc?id=1E5Q8BQqPJgvXLA-s6z5RJLat-Uj_ggmo"></mj-image>
+      </mj-column>
+      <mj-column width="70%">
+        <mj-text font-weight="bold" line-height="24px">
+          <a href="https://draft.dev/#course">Building a Better Technical Blog</a>
+        </mj-text>
+        <mj-text color="#666666" font-size="16px" line-height="20px">
+          Get the free 7-day email course from Draft to learn how to build a blog that reaches software engineers and
+          helps your company grow.
+        </mj-text>
+        <mj-text>
+          <a href="https://draft.dev/#course">Enroll for free →</a>
+        </mj-text>
+        <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
     </mj-section>
-    {{#each blogPosts.items}}
-    <!-- Blog Post -->
-    <mj-section border-bottom="1px dashed lightgrey">
-      <mj-column>
-        <mj-text line-height="22px">
-          <a href="{{this.link}}">{{this.title}}</a>
-        </mj-text>
-        <mj-text color="#666666" line-height="20px">
-          {{this.content}}
-        </mj-text>
-      </mj-column>
-    </mj-section>
-    {{/each}}
 
     {{#if conferences.items.0.preferred}}
     <!-- Feed Divider -->
