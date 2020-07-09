@@ -57,22 +57,21 @@ export const weeklyMjmlTemplate = `<mjml>
         <mj-image href="https://www.cfpland.com/" align="center" src="https://drive.google.com/uc?id=1kdzltxyMtycKo-RO_08d-PJcKx4GFdh_" alt="CFP Land Weekly Update" padding-bottom="20px"></mj-image>
       </mj-column>
     </mj-section>
-    
     <!-- Sponsor: Draft -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
       <mj-column width="30%">
-        <mj-image align="center" href="https://draft.dev/#course" src="https://drive.google.com/uc?id=1E5Q8BQqPJgvXLA-s6z5RJLat-Uj_ggmo"></mj-image>
+        <mj-image align="center" href="https://learn.draft.dev/posts/three-questions" src="https://drive.google.com/uc?id=1E5Q8BQqPJgvXLA-s6z5RJLat-Uj_ggmo"></mj-image>
       </mj-column>
       <mj-column width="70%">
         <mj-text font-weight="bold" line-height="24px">
-          <a href="https://draft.dev/#course">Building a Better Technical Blog</a>
+          <a href="https://learn.draft.dev/posts/three-questions">3 Questions You Should Ask Before Starting a Blog</a>
         </mj-text>
         <mj-text color="#666666" font-size="16px" line-height="20px">
-          Get the free 7-day email course from Draft to learn how to build a blog that reaches software engineers and
-          helps your company grow.
+          There are plenty of communication channels out there, so why would you invest in a blog? Here are three questions
+          that every blog manager should ask before they get started.
         </mj-text>
         <mj-text>
-          <a href="https://draft.dev/#course">Enroll for free →</a>
+          <a href="https://learn.draft.dev/posts/three-questions">Read more →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
