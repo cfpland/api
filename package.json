@@ -56,7 +56,7 @@
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.7.1",
     "rss-parser": "^3.7.2",
-    "rss-to-email": "^0.9.0",
+    "rss-to-email": "^0.10.0",
     "rxjs": "^6.5.3",
     "typeorm": "^0.2.18"
   },
