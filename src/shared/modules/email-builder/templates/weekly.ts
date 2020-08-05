@@ -58,25 +58,24 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section>
     
-    <!-- Weekly Reading -->
-    <mj-section>
-      <mj-column>
-        <mj-text font-size="24px" padding-top="10px">📰 Weekly Reading %opentracker%</mj-text>
+    <!-- Sponsor -->
+    <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
+      <mj-column width="25%">
+        <mj-image align="center" href="https://forms.gle/H2JXTDVr29ZCUakt8" src="https://drive.google.com/uc?id=18Tf4Ogx_Ue8XhUFsptO-G88KggDXUz_H"></mj-image>
+      </mj-column>
+      <mj-column width="75%">
+        <mj-text font-weight="bold">
+          <a href="https://forms.gle/H2JXTDVr29ZCUakt8">Shift Developer Conference - Call for Speakers</a>
+        </mj-text>
+        <mj-text color="#666666" font-size="14px" line-height="20px">
+          Shift 2020 is will bring together more than 1300 attendees. Help us build an even greater conference by submitting your talk proposals. If chosen, you will join our stellar speaker line-up which has previously included experts from companies such as Heroku, Github, Google, AWS and many others.
+        </mj-text>
+        <mj-text>
+          <a href="https://forms.gle/H2JXTDVr29ZCUakt8">Apply to speak today! →</a>
+        </mj-text>
+        <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
     </mj-section>
-    {{#each blogPosts.items}}
-    <!-- Blog Post -->
-    <mj-section border-bottom="1px dashed lightgrey">
-      <mj-column>
-        <mj-text line-height="22px">
-          <a href="{{this.link}}">{{this.title}}</a>
-        </mj-text>
-        <mj-text color="#666666" line-height="20px">
-          {{this.content}}
-        </mj-text>
-      </mj-column>
-    </mj-section>
-    {{/each}}
 
     {{#if conferences.items.0.preferred}}
     <!-- Feed Divider -->
