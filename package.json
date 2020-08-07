@@ -39,7 +39,7 @@
     "@sendgrid/mail": "^6.4.0",
     "airtable": "^0.7.2",
     "cache-manager": "^2.10.0",
-    "class-transformer": "^0.2.3",
+    "class-transformer": "^0.3.1",
     "class-validator": "^0.9.1",
     "handlebars": "^4.2.0",
     "handlebars-helpers": "^0.10.0",
