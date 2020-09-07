@@ -41,7 +41,7 @@
     "cache-manager": "^2.10.0",
     "class-transformer": "^0.2.3",
     "class-validator": "^0.9.1",
-    "handlebars": "^4.2.0",
+    "handlebars": "^4.5.3",
     "handlebars-helpers": "^0.10.0",
     "html-minifier": "^3.5.21",
     "mailchimp-api-v3": "^1.13.1",
