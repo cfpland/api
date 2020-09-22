@@ -58,20 +58,20 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section>
     
-    <!-- Sponsor: Draft -->
+    <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="30%">
-        <mj-image align="center" href="https://draft.dev/" src="https://drive.google.com/uc?id=1qlldMq884v-DGyQLVHMP7mM36ZEetXFX"></mj-image>
+      <mj-column width="25%">
+        <mj-image align="center" href="https://sessionize.com/devsecops-days-denver---virtual/" src="https://drive.google.com/uc?id=1ZpR5Lw3Rh5JD56TE47Yr5Ob6W3EIW82a"></mj-image>
       </mj-column>
-      <mj-column width="70%">
-        <mj-text font-weight="bold" line-height="24px">
-          <a href="https://draft.dev/">Technical Blog Posts Done For You</a>
+      <mj-column width="75%">
+        <mj-text font-weight="bold">
+          <a href="https://sessionize.com/devsecops-days-denver---virtual/">DevSecOps Days Denver CFP</a>
         </mj-text>
-        <mj-text color="#666666" font-size="16px" line-height="20px">
-          Don't let your blog languish because none of your engineers have time to contribute. Let Draft handle the writing for you.
+        <mj-text color="#666666" font-size="14px" line-height="20px">
+          <strong>Are you a Developer, DevOps Engineer, SecOps professional who is obsessed with shipping better quality more secure software faster?</strong> We are looking for the tactical and practical stories that you can share. Submit your CFP to DevSecOps Days Denver's Virtual Conference.
         </mj-text>
         <mj-text>
-          <a href="https://draft.dev/">Learn more →</a>
+          <a href="https://sessionize.com/devsecops-days-denver---virtual/">Learn more and apply! →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
