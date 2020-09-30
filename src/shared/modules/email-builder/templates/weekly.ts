@@ -58,20 +58,21 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section>
     
-    <!-- Sponsor -->
+    <!-- Sponsor: Draft -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="25%">
-        <mj-image align="center" href="https://sessionize.com/devsecops-days-denver---virtual/" src="https://drive.google.com/uc?id=1ZpR5Lw3Rh5JD56TE47Yr5Ob6W3EIW82a"></mj-image>
+      <mj-column width="30%">
+        <mj-image align="center" href="https://learn.draft.dev/posts/three-questions" src="https://drive.google.com/uc?id=1E5Q8BQqPJgvXLA-s6z5RJLat-Uj_ggmo"></mj-image>
       </mj-column>
-      <mj-column width="75%">
-        <mj-text font-weight="bold">
-          <a href="https://sessionize.com/devsecops-days-denver---virtual/">DevSecOps Days Denver CFP</a>
+      <mj-column width="70%">
+        <mj-text font-weight="bold" line-height="24px">
+          <a href="https://learn.draft.dev/posts/three-questions">3 Questions You Should Ask Before Starting a Blog</a>
         </mj-text>
-        <mj-text color="#666666" font-size="14px" line-height="20px">
-          <strong>Are you a Developer, DevOps Engineer, SecOps professional who is obsessed with shipping better quality more secure software faster?</strong> We are looking for the tactical and practical stories that you can share. Submit your CFP to DevSecOps Days Denver's Virtual Conference.
+        <mj-text color="#666666" font-size="16px" line-height="20px">
+          There are plenty of communication channels out there, so why would you invest in a blog? Here are three questions
+          that every blog manager should ask before they get started.
         </mj-text>
         <mj-text>
-          <a href="https://sessionize.com/devsecops-days-denver---virtual/">Learn more and apply! →</a>
+          <a href="https://learn.draft.dev/posts/three-questions">Read more →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
