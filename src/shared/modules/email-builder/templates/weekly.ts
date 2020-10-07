@@ -103,9 +103,6 @@ export const weeklyMjmlTemplate = `<mjml>
           <p title="CFP Due Date">
             <strong>Due:</strong> {{date this.cfp_due_date "LL"}}
           </p>
-          <p title="perks">
-            <strong>Perks:</strong> {{ this.perks_list }}
-          </p>
           <p title="Conference Date">
             <strong>Conference Date:</strong> {{date this.event_start_date "LL"}}
           </p>
@@ -169,9 +166,6 @@ export const weeklyMjmlTemplate = `<mjml>
         <mj-text color="#666666" font-size="14px" line-height="20px">
           <p title="CFP Due Date">
             <strong>Due:</strong> {{date this.cfp_due_date "LL"}}
-          </p>
-          <p title="perks">
-            <strong>Perks:</strong> {{ this.perks_list }}
           </p>
           <p title="Conference Date">
             <strong>Conference Date:</strong> {{date this.event_start_date "LL"}}
