@@ -58,21 +58,20 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section>
     
-    <!-- Sponsor: Draft -->
+    <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="30%">
-        <mj-image align="center" href="https://learn.draft.dev/posts/three-questions" src="https://drive.google.com/uc?id=1E5Q8BQqPJgvXLA-s6z5RJLat-Uj_ggmo"></mj-image>
+      <mj-column width="25%">
+        <mj-image align="center" href="https://papercall.io/jlove" src="https://drive.google.com/uc?id=1dvSoLmx1_YVdCTGdgVRrFiT8337X-4iJ"></mj-image>
       </mj-column>
-      <mj-column width="70%">
-        <mj-text font-weight="bold" line-height="24px">
-          <a href="https://learn.draft.dev/posts/three-questions">3 Questions You Should Ask Before Starting a Blog</a>
+      <mj-column width="75%">
+        <mj-text font-weight="bold">
+          <a href="https://papercall.io/jlove">jLove Conference CFP</a>
         </mj-text>
-        <mj-text color="#666666" font-size="16px" line-height="20px">
-          There are plenty of communication channels out there, so why would you invest in a blog? Here are three questions
-          that every blog manager should ask before they get started.
+        <mj-text color="#666666" font-size="14px" line-height="20px">
+          <strong>Are you a student, a programmer with a few years of experience, an expert in Java or Java Champion?</strong> This December we are taking participants on a tour through the ecosystem of one of the most popular languages in the world.
         </mj-text>
         <mj-text>
-          <a href="https://learn.draft.dev/posts/three-questions">Read more →</a>
+          <a href="https://papercall.io/jlove">Learn more and apply! →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
