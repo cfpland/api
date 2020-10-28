@@ -58,24 +58,25 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section>
     
-    <!-- Sponsor -->
+    <!-- Sponsor: Draft -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="25%">
-        <mj-image align="center" href="https://papercall.io/jlove" src="https://drive.google.com/uc?id=1dvSoLmx1_YVdCTGdgVRrFiT8337X-4iJ"></mj-image>
+      <mj-column width="30%">
+        <mj-image align="center" href="https://draft.dev/#playbook" src="https://drive.google.com/uc?id=16RIxm_7SPVUKISfkMYr2Rr7oAfKWvlwG"></mj-image>
       </mj-column>
-      <mj-column width="75%">
-        <mj-text font-weight="bold">
-          <a href="https://papercall.io/jlove">jLove Conference CFP</a>
+      <mj-column width="70%">
+        <mj-text font-weight="bold" line-height="24px">
+          <a href="https://draft.dev/#playbook">Managing a Technical Blog?</a>
         </mj-text>
-        <mj-text color="#666666" font-size="14px" line-height="20px">
-          <strong>Are you a student, a programmer with a few years of experience, an expert in Java or Java Champion?</strong> This December we are taking participants on a tour through the ecosystem of one of the most popular languages in the world.
+        <mj-text color="#666666" font-size="16px" line-height="20px">
+          <em>The Technical Content Manager’s Playbook</em> by Draft.dev is a collection of resources you can use to produce high-quality, technical blog content. <strong>If you're managing writers, a publishing calendar, or creating a style guide, this playbook is for you.</strong>
         </mj-text>
         <mj-text>
-          <a href="https://papercall.io/jlove">Learn more and apply! →</a>
+          <a href="https://draft.dev/#playbook">Download Free →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
     </mj-section>
+
 
     {{#if conferences.items.0.preferred}}
     <!-- Feed Divider -->
@@ -121,26 +122,7 @@ export const weeklyMjmlTemplate = `<mjml>
     </mj-section>
     {{/if}}{{/each}}
     
-    <!-- Sponsor: Draft -->
-    <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="30%">
-        <mj-image align="center" href="https://draft.dev/#course" src="https://drive.google.com/uc?id=1E5Q8BQqPJgvXLA-s6z5RJLat-Uj_ggmo"></mj-image>
-      </mj-column>
-      <mj-column width="70%">
-        <mj-text font-weight="bold" line-height="24px">
-          <a href="https://draft.dev/#course">Building a Better Technical Blog</a>
-        </mj-text>
-        <mj-text color="#666666" font-size="16px" line-height="20px">
-          Get the free 7-day email course from Draft to learn how to build a blog that reaches software engineers and
-          helps your company grow.
-        </mj-text>
-        <mj-text>
-          <a href="https://draft.dev/#course">Enroll for free →</a>
-        </mj-text>
-        <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
-      </mj-column>
-    </mj-section>
-
+    <!-- Sponsor: Draft - none this week -->
 
     {{/if}}
     
