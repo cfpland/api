@@ -61,23 +61,21 @@ export const weeklyMjmlTemplate = `<mjml>
     <!-- Sponsor: Draft -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
       <mj-column width="30%">
-        <mj-image align="center" href="https://draft.dev/learn/posts/technical-tutorials" src="https://drive.google.com/uc?id=1qlldMq884v-DGyQLVHMP7mM36ZEetXFX"></mj-image>
+        <mj-image align="center" href="https://draft.dev/#playbook" src="https://drive.google.com/uc?id=16RIxm_7SPVUKISfkMYr2Rr7oAfKWvlwG"></mj-image>
       </mj-column>
       <mj-column width="70%">
         <mj-text font-weight="bold" line-height="24px">
-          <a href="https://draft.dev/learn/posts/technical-tutorials">How to Write a Great Technical Tutorial</a>
+          <a href="https://draft.dev/#playbook">Managing a Technical Blog?</a>
         </mj-text>
         <mj-text color="#666666" font-size="16px" line-height="20px">
-          We write a lot of tutorials for software engineers, so in this guide, we're sharing some tips for writing better technical tutorials.
+          <em>The Technical Content Manager’s Playbook</em> by Draft.dev is a collection of resources you can use to produce high-quality, technical blog content. <strong>If you're managing writers, a publishing calendar, or creating a style guide, this playbook is for you.</strong>
         </mj-text>
         <mj-text>
-          <a href="https://draft.dev/learn/posts/technical-tutorials">Read more →</a>
+          <a href="https://draft.dev/#playbook">Download Free →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
     </mj-section>
-
-
 
     {{#if conferences.items.0.preferred}}
     <!-- Feed Divider -->
