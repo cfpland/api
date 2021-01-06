@@ -61,17 +61,17 @@ export const weeklyMjmlTemplate = `<mjml>
     <!-- Sponsor: Draft -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
       <mj-column width="30%">
-        <mj-image align="center" href="https://draft.dev/#playbook" src="https://drive.google.com/uc?id=16RIxm_7SPVUKISfkMYr2Rr7oAfKWvlwG"></mj-image>
+        <mj-image align="center" href="https://draft.dev/learn/posts/startup-blog-ideas" src="https://drive.google.com/uc?id=1qlldMq884v-DGyQLVHMP7mM36ZEetXFX"></mj-image>
       </mj-column>
       <mj-column width="70%">
         <mj-text font-weight="bold" line-height="24px">
-          <a href="https://draft.dev/#playbook">Managing a Technical Blog?</a>
+          <a href="https://draft.dev/learn/posts/startup-blog-ideas">50+ Ideas for Your Blog</a>
         </mj-text>
         <mj-text color="#666666" font-size="16px" line-height="20px">
-          <em>The Technical Content Manager’s Playbook</em> by Draft.dev is a collection of resources you can use to produce high-quality, technical blog content. <strong>If you're managing writers, a publishing calendar, or creating a style guide, this playbook is for you.</strong>
+          Coming up with ideas for your blog can be mentally taxing. An SEO audit can help you find opportunities, but it can leave your topics feeling a bit flat. Here are 52 ideas we've seen work for our clients and partners.
         </mj-text>
         <mj-text>
-          <a href="https://draft.dev/#playbook">Download Free →</a>
+          <a href="https://draft.dev/learn/posts/startup-blog-ideas">Read more →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
