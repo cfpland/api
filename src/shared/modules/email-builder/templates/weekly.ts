@@ -58,21 +58,20 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section>
     
-    <!-- Sponsor: Draft -->
+    <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="30%">
-        <mj-image align="center" href="https://draft.dev/" src="https://drive.google.com/uc?id=1qlldMq884v-DGyQLVHMP7mM36ZEetXFX"></mj-image>
+      <mj-column width="25%">
+        <mj-image align="center" href="https://sessionize.com/techknowday_iwd_2021/" src="https://drive.google.com/uc?id=1VS_UhPAwqoA_x0vkttJgHaNmfjSBpoJr"></mj-image>
       </mj-column>
-      <mj-column width="70%">
-        <mj-text font-weight="bold" line-height="24px">
-          <a href="https://draft.dev/">Technical Marketing Content Done For You</a>
+      <mj-column width="75%">
+        <mj-text font-weight="bold">
+          <a href="https://sessionize.com/techknowday_iwd_2021/">TECH(K)NOW Day on International Women's Day</a>
         </mj-text>
-        <mj-text color="#666666" font-size="16px" line-height="20px">
-          Content marketing is one of the best ways to reach software developers in 2021.
-          Find out how Draft.dev can help you create a steady stream of technical content for your blog.
+        <mj-text color="#666666" font-size="14px" line-height="20px">
+          We are looking for women (cis, trans, and non-binary) who can give talks on technical, creative, business, and personal development topics. Share your experience and inspire others in tech!
         </mj-text>
         <mj-text>
-          <a href="https://draft.dev/">Learn more →</a>
+          <a href="https://sessionize.com/techknowday_iwd_2021/">Learn more and apply today →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
