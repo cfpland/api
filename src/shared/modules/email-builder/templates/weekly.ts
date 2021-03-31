@@ -65,12 +65,13 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
       <mj-column width="70%">
         <mj-text font-weight="bold" line-height="24px">
-          <a href="https://draft.dev/#write">Love Writing? We Pay Developers to Write</a>
+          <a href="https://draft.dev/#write">Writing: The Perfect Compliment to Speaking</a>
         </mj-text>
         <mj-text color="#666666" font-size="16px" line-height="20px">
-          Draft.dev works with diverse writers from around the world to create blog posts and tutorials written
-          for a technical audience. Raise your profile, work with professional editors, and make a little money
-          along the way!
+          If you want to increase your reach and improve your personal brand, writing is 
+          one of the best compliments to public speaking. If you want to write content
+          on other blogs, Draft.dev will send you writing opportunities every week, and pay
+          you for your expertise! 
         </mj-text>
         <mj-text>
           <a href="https://draft.dev/#write">Apply today →</a>
