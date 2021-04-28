@@ -61,20 +61,17 @@ export const weeklyMjmlTemplate = `<mjml>
     <!-- Sponsor: Draft -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
       <mj-column width="30%">
-        <mj-image align="center" href="https://draft.dev/#write" src="https://drive.google.com/uc?id=1qlldMq884v-DGyQLVHMP7mM36ZEetXFX"></mj-image>
+        <mj-image align="center" href="https://draft.dev/newsletter" src="https://drive.google.com/uc?id=1qlldMq884v-DGyQLVHMP7mM36ZEetXFX"></mj-image>
       </mj-column>
       <mj-column width="70%">
         <mj-text font-weight="bold" line-height="24px">
-          <a href="https://draft.dev/#write">Writing: The Perfect Compliment to Speaking</a>
+          <a href="https://draft.dev/newsletter">Weekly Tips for Reaching Developers</a>
         </mj-text>
         <mj-text color="#666666" font-size="16px" line-height="20px">
-          If you want to increase your reach and improve your personal brand, writing is 
-          one of the best compliments to public speaking. If you want to write content
-          on other blogs, Draft.dev will send you writing opportunities every week, and pay
-          you for your expertise! 
+          If you're running a developer blog or just trying to reach software developers, this newsletter is for you. Subscribe to Draft Weekly for tips, case studies, and other new resources every week!
         </mj-text>
         <mj-text>
-          <a href="https://draft.dev/#write">Apply today →</a>
+          <a href="https://draft.dev/#write">Subscribe today →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
