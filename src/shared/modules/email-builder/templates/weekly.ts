@@ -56,26 +56,30 @@ export const weeklyMjmlTemplate = `<mjml>
       <mj-column>
         <mj-image href="https://www.cfpland.com/" align="center" src="https://drive.google.com/uc?id=1kdzltxyMtycKo-RO_08d-PJcKx4GFdh_" alt="CFP Land Weekly Update" padding-bottom="20px"></mj-image>
       </mj-column>
-    </mj-section>
+    </mj-section> 
     
-    <!-- Sponsor: Draft -->
+    <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="30%">
-        <mj-image align="center" href="https://draft.dev/newsletter" src="https://drive.google.com/uc?id=1qlldMq884v-DGyQLVHMP7mM36ZEetXFX"></mj-image>
+      <mj-column width="25%">
+        <mj-image align="center" href="https://sessionize.com/shift-dev-2021/" src="https://drive.google.com/uc?id=1FVoTRtsGk2GEvNc1YYvOziThHih4aEg5"></mj-image>
       </mj-column>
-      <mj-column width="70%">
-        <mj-text font-weight="bold" line-height="24px">
-          <a href="https://draft.dev/newsletter">Weekly Tips for Reaching Developers</a>
+      <mj-column width="75%">
+        <mj-text font-weight="bold">
+          <a href="https://sessionize.com/shift-dev-2021/">Infobip Shift 2021 Conference - Call for Speakers</a>
         </mj-text>
-        <mj-text color="#666666" font-size="16px" line-height="20px">
-          If you're running a developer blog or just trying to reach software developers, this newsletter is for you. Subscribe to Draft Weekly for tips, case studies, and other new resources every week!
+        <mj-text color="#666666" font-size="14px" line-height="20px">
+          Infobip Shift is the largest Developer event in Southeastern Europe with more than 3000 attendees.
+          Help us build an even greater conference by submitting your talk proposals.
+          If chosen, you will join our stellar speaker line-up to talk about the most cutting
+          edge technologies, techniques and trends in the developer space
         </mj-text>
         <mj-text>
-          <a href="https://draft.dev/#write">Subscribe today →</a>
+          <a href="https://sessionize.com/shift-dev-2021/">Apply to speak today! →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
     </mj-section>
+
 
     {{#if conferences.items.0.preferred}}
     <!-- Feed Divider -->
