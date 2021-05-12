@@ -61,25 +61,25 @@ export const weeklyMjmlTemplate = `<mjml>
     <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
       <mj-column width="25%">
-        <mj-image align="center" href="https://sessionize.com/shift-dev-2021/" src="https://drive.google.com/uc?id=1FVoTRtsGk2GEvNc1YYvOziThHih4aEg5"></mj-image>
+        <mj-image align="center" href="https://docs.google.com/forms/d/e/1FAIpQLScibByS8HM6fLgIxKSNnINkdGV2fHT04iNMAYENZzbwhWbcRg/viewform" src="https://drive.google.com/uc?id=1CJ5vG1kAOJLxFPynyK4My2BSSXzezA_y"></mj-image>
       </mj-column>
       <mj-column width="75%">
         <mj-text font-weight="bold">
-          <a href="https://sessionize.com/shift-dev-2021/">Infobip Shift 2021 Conference - Call for Speakers</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScibByS8HM6fLgIxKSNnINkdGV2fHT04iNMAYENZzbwhWbcRg/viewform">
+            Reliable Web Summit CFPs Close Soon!
+          </a>
         </mj-text>
         <mj-text color="#666666" font-size="14px" line-height="20px">
-          Infobip Shift is the largest Developer event in Southeastern Europe with more than 3000 attendees.
-          Help us build an even greater conference by submitting your talk proposals.
-          If chosen, you will join our stellar speaker line-up to talk about the most cutting
-          edge technologies, techniques and trends in the developer space
+          The Reliable Web Summit is a conference dedicated to the goal of building reliable web applications.
+          Come share your knowledge about the best ways to build reliable web applications, write quality code,
+          choose scalable architectures, and create effective automated tests.
         </mj-text>
         <mj-text>
-          <a href="https://sessionize.com/shift-dev-2021/">Apply to speak today! →</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScibByS8HM6fLgIxKSNnINkdGV2fHT04iNMAYENZzbwhWbcRg/viewform">Apply to speak today →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
     </mj-section>
-
 
     {{#if conferences.items.0.preferred}}
     <!-- Feed Divider -->

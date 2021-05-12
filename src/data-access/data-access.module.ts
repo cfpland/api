@@ -38,7 +38,7 @@ import { UserAccount } from './accounts/user-account.entity';
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: process.env.ENVIRONMENT === 'develop',
       keepConnectionAlive: true,
-      extra: { ssl: true },
+      extra: { ssl: true }, // Comment out for dev
     }),
     TypeOrmModule.forFeature([
       User,
