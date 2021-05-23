@@ -61,48 +61,25 @@ export const weeklyMjmlTemplate = `<mjml>
     <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
       <mj-column width="25%">
-        <mj-image align="center" href="https://www.wearedevelopers.com/world-congress/call-for-speakers" src="https://drive.google.com/uc?id=1GkrRnbVTpWKo_tngRc4jvRenkm5F6YSO"></mj-image>
+        <mj-image align="center" href="https://www.papercall.io/the-big-transaction" src="https://drive.google.com/uc?id=19Q-lfkIaShFqq-4DSso2mhE114xFcuYU"></mj-image>
       </mj-column>
       <mj-column width="75%">
         <mj-text font-weight="bold">
-          <a href="https://www.wearedevelopers.com/world-congress/call-for-speakers">
-            WeAreDevelopers World Congress CFP
+          <a href="https://www.papercall.io/the-big-transaction">
+            The Big Transaction CFP
           </a>
         </mj-text>
         <mj-text color="#666666" font-size="14px" line-height="20px">
-          The WeAreDevelopers World Congress is the world's largest annual gathering of
-          software developers, engineers, software architects and tech decision-makers.
-          Submit your talk and join an unparalleled line-up of inspiring speakers.
+          The Big Transaction is a technical conference for engineers who want to 
+          learn the best approaches to building payment systems. We're looking for
+          speakers to share their stories and things they've learned!
         </mj-text>
         <mj-text>
-          <a href="https://www.wearedevelopers.com/world-congress/call-for-speakers">Applications close in 10 days →</a>
+          <a href="https://www.papercall.io/the-big-transaction">Apply to speak today →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
     </mj-section>
-
-    <!-- Sponsor -->
-    <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="25%">
-        <mj-image align="center" href="https://prisma103696.typeform.com/to/Vlfg1HE2" src="https://drive.google.com/uc?id=1AdhrjvAh_YwoCBp_lCEODBIg4GhWj_dQ"></mj-image>
-      </mj-column>
-      <mj-column width="75%">
-        <mj-text font-weight="bold">
-          <a href="https://prisma103696.typeform.com/to/Vlfg1HE2">
-            Prisma Day 2021 CFP
-          </a>
-        </mj-text>
-        <mj-text color="#666666" font-size="14px" line-height="20px">
-          Join us for two days of talks and workshops by the most exciting members
-          of the Prisma community. Beginners are welcome just as well as veterans!
-        </mj-text>
-        <mj-text>
-          <a href="https://prisma103696.typeform.com/to/Vlfg1HE2">Applications close in 3 days →</a>
-        </mj-text>
-        <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
-      </mj-column>
-    </mj-section>
-
 
     {{#if conferences.items.0.preferred}}
     <!-- Feed Divider -->
