@@ -58,24 +58,21 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section> 
     
-    <!-- Sponsor -->
+    <!-- Sponsor: Draft -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="25%">
-        <mj-image align="center" href="https://www.papercall.io/the-big-transaction" src="https://drive.google.com/uc?id=19Q-lfkIaShFqq-4DSso2mhE114xFcuYU"></mj-image>
+      <mj-column width="30%">
+        <mj-image align="center" href="https://draft.dev/" src="https://drive.google.com/uc?id=1qlldMq884v-DGyQLVHMP7mM36ZEetXFX"></mj-image>
       </mj-column>
-      <mj-column width="75%">
-        <mj-text font-weight="bold">
-          <a href="https://www.papercall.io/the-big-transaction">
-            The Big Transaction CFP
-          </a>
+      <mj-column width="70%">
+        <mj-text font-weight="bold" line-height="24px">
+          <a href="https://draft.dev/">Stop Begging Your Engineers to Write Blog Posts For You</a>
         </mj-text>
-        <mj-text color="#666666" font-size="14px" line-height="20px">
-          The Big Transaction is a technical conference for engineers who want to 
-          learn the best approaches to building payment systems. We're looking for
-          speakers to share their stories and things they've learned!
+        <mj-text color="#666666" font-size="16px" line-height="20px">
+          Content is one of the best ways to reach software developers in 2021.
+          Find out how Draft.dev can help you create a steady stream of technical content for your blog.
         </mj-text>
         <mj-text>
-          <a href="https://www.papercall.io/the-big-transaction">Apply to speak today →</a>
+          <a href="https://draft.dev/">Learn more →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
