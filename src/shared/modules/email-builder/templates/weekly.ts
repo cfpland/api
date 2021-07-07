@@ -58,21 +58,25 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section> 
     
-    <!-- Sponsor: Draft -->
+    <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="30%">
-        <mj-image align="center" href="https://draft.dev/learn/posts/topic-clusters" src="https://drive.google.com/uc?id=1qlldMq884v-DGyQLVHMP7mM36ZEetXFX"></mj-image>
+      <mj-column width="25%">
+        <mj-image align="center" href="https://developer.cisco.com/devnetcreate/2021" src="https://drive.google.com/uc?id=1CK481wn17QFwke8i-eOeSp7q0a8N70va"></mj-image>
       </mj-column>
-      <mj-column width="70%">
-        <mj-text font-weight="bold" line-height="24px">
-          <a href="https://draft.dev/learn/posts/topic-clusters">Find out what developers are searching for</a>
+      <mj-column width="75%">
+        <mj-text font-weight="bold">
+          <a href="https://developer.cisco.com/devnetcreate/2021">
+            DevNet Create CFP
+          </a>
         </mj-text>
-        <mj-text color="#666666" font-size="16px" line-height="20px">
-          With Draft.dev's keyword research, you can be sure that the technical content you publish will 
-          drive software engineers to your business. Learn more about how we create topic clusters and perform keyword research today.
+        <mj-text color="#666666" font-size="14px" line-height="20px">
+          Cisco’s annual conference for developers is happening this October.
+          If you have content you’d like to present…now is the time! Come be part
+          of an engaging, practitioner-led developer community and share your knowledge
+          with the world.
         </mj-text>
         <mj-text>
-          <a href="https://draft.dev/learn/posts/topic-clusters">Learn more →</a>
+          <a href="https://developer.cisco.com/devnetcreate/2021">Applications close next week →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
