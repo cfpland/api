@@ -58,25 +58,21 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section> 
     
-    <!-- Sponsor -->
+    <!-- Sponsor: Draft -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="25%">
-        <mj-image align="center" href="https://developer.cisco.com/devnetcreate/2021" src="https://drive.google.com/uc?id=1CK481wn17QFwke8i-eOeSp7q0a8N70va"></mj-image>
+      <mj-column width="30%">
+        <mj-image align="center" href="https://draft.dev/" src="https://drive.google.com/uc?id=1qlldMq884v-DGyQLVHMP7mM36ZEetXFX"></mj-image>
       </mj-column>
-      <mj-column width="75%">
-        <mj-text font-weight="bold">
-          <a href="https://developer.cisco.com/devnetcreate/2021">
-            DevNet Create CFP
-          </a>
+      <mj-column width="70%">
+        <mj-text font-weight="bold" line-height="24px">
+          <a href="https://draft.dev/">Stop Begging Your Engineers to Write Blog Posts For You</a>
         </mj-text>
-        <mj-text color="#666666" font-size="14px" line-height="20px">
-          Cisco’s annual conference for developers is happening this October.
-          If you have content you’d like to present…now is the time! Come be part
-          of an engaging, practitioner-led developer community and share your knowledge
-          with the world.
+        <mj-text color="#666666" font-size="16px" line-height="20px">
+          Content is one of the best ways to reach software developers in 2021.
+          Find out how Draft.dev can help you create a steady stream of technical content today!
         </mj-text>
         <mj-text>
-          <a href="https://developer.cisco.com/devnetcreate/2021">Applications close next week →</a>
+          <a href="https://draft.dev/">Learn more →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
