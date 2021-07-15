@@ -56,23 +56,25 @@ export const weeklyMjmlTemplate = `<mjml>
       <mj-column>
         <mj-image href="https://www.cfpland.com/" align="center" src="https://drive.google.com/uc?id=1kdzltxyMtycKo-RO_08d-PJcKx4GFdh_" alt="CFP Land Weekly Update" padding-bottom="20px"></mj-image>
       </mj-column>
-    </mj-section> 
+    </mj-section>
     
-    <!-- Sponsor: Draft -->
+    <!-- Sponsor -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="30%">
-        <mj-image align="center" href="https://draft.dev/" src="https://drive.google.com/uc?id=1qlldMq884v-DGyQLVHMP7mM36ZEetXFX"></mj-image>
+      <mj-column width="25%">
+        <mj-image align="center" href="https://www.cvent.com/c/abstracts/73b6dabe-8ec1-4da2-82a4-cb045f6901d1" src="https://drive.google.com/uc?id=1xBQGQk0g5y-T_6jyAUNN3Z6CUrH5EvN8"></mj-image>
       </mj-column>
-      <mj-column width="70%">
-        <mj-text font-weight="bold" line-height="24px">
-          <a href="https://draft.dev/">Stop Begging Your Engineers to Write Blog Posts For You</a>
+      <mj-column width="75%">
+        <mj-text font-weight="bold">
+          <a href="https://www.cvent.com/c/abstracts/73b6dabe-8ec1-4da2-82a4-cb045f6901d1">
+            Trajectory Conference 2021 CFP
+          </a>
         </mj-text>
-        <mj-text color="#666666" font-size="16px" line-height="20px">
-          Content is one of the best ways to reach software developers in 2021.
-          Find out how Draft.dev can help you create a steady stream of technical content today!
+        <mj-text color="#666666" font-size="14px" line-height="20px">
+          This year we are focused on five specific themes and are looking for conceptual/theoretical content as well as examples from real-world practitioners.
+          Experienced and novice speakers are welcome. We offer speaker coaching to ensure you deliver a compelling talk or workshop.
         </mj-text>
         <mj-text>
-          <a href="https://draft.dev/">Learn more →</a>
+          <a href="https://www.cvent.com/c/abstracts/73b6dabe-8ec1-4da2-82a4-cb045f6901d1">Apply Today →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
@@ -121,8 +123,6 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section>
     {{/if}}{{/each}}
-    
-    <!-- Sponsor: Draft - none this week -->
 
     {{/if}}
     
@@ -186,9 +186,7 @@ export const weeklyMjmlTemplate = `<mjml>
       <mj-column>
         <mj-text align="center" font-size="14px" padding-bottom="50px">
             <a clicktracking=off href="{{ subscriber.profileLink }}">Preferences</a> |
-            <a href="https://www.cfpland.com/submit">Submit a Conference</a> |
-            <a href="https://sponsor.cfpland.com/">Sponsor</a> |
-            <a clicktracking=off href="https://www.cfpland.com/members/">CFP Land Pro</a>
+            <a href="https://www.cfpland.com/submit">Submit a Conference</a>
         </mj-text>
       </mj-column>
     </mj-section>
@@ -201,8 +199,7 @@ export const weeklyMjmlTemplate = `<mjml>
           <a clicktracking=off href="{{ subscriber.unsubscribeLink }}">Unsubscribe</a> or
           <a clicktracking=off href="{{ subscriber.profileLink }}">update your preferences</a>.
           <br/>
-          © 2020, <a href="https://www.cfpland.com">CFP Land</a>.
-          Created by <a href="https://www.portablecto.com">Portable CTO, LLC</a>.
+          © 2021, <a href="https://www.cfpland.com">CFP Land</a> by Hughes Domains, LLC.
         </mj-text>
       </mj-column>
     </mj-section>
