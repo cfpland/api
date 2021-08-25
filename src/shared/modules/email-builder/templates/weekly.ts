@@ -58,25 +58,27 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
     </mj-section>
     
-    <!-- Sponsor -->
+    <!-- Sponsor: Draft -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
-      <mj-column width="25%">
-        <mj-image align="center" href="https://www.cloud-native-conf.wtf/cfp?utm_source=cfpland&utm_medium=text&utm_campaign=CNconference" src="https://drive.google.com/uc?id=13c2_tYMvuCxHbyHZFfYA5inDOWNGcjRu"></mj-image>
+      <mj-column width="30%">
+        <mj-image align="center" href="https://draft.dev/#write" src="https://drive.google.com/uc?id=1qlldMq884v-DGyQLVHMP7mM36ZEetXFX"></mj-image>
       </mj-column>
-      <mj-column width="75%">
-        <mj-text font-weight="bold">
-          <a href="https://www.cloud-native-conf.wtf/cfp?utm_source=cfpland&utm_medium=text&utm_campaign=CNconference">WTF is Cloud Native?</a>
+      <mj-column width="70%">
+        <mj-text font-weight="bold" line-height="24px">
+          <a href="https://draft.dev/#write">Spread Your Expertise</a>
         </mj-text>
-        <mj-text color="#666666" font-size="14px" line-height="20px">
-          We believe that a proper Cloud Native transformation cannot happen without the right strategies and cultural changes.
-          Submit your talk proposal today for a chance to join our hybrid conference this fall.
+        <mj-text color="#666666" font-size="16px" line-height="20px">
+          Draft.dev works with software engineers around the world to create blog posts and tutorials.
+          Raise your profile, work with professional editors, and make some extra money
+          on the side!
         </mj-text>
         <mj-text>
-          <a href="https://www.cloud-native-conf.wtf/cfp?utm_source=cfpland&utm_medium=text&utm_campaign=CNconference">Learn more and apply now! →</a>
+          <a href="https://draft.dev/#write">Apply today →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
     </mj-section>
+
 
     {{#if conferences.items.0.preferred}}
     <!-- Feed Divider -->
