@@ -61,19 +61,18 @@ export const weeklyMjmlTemplate = `<mjml>
     <!-- Sponsor: Draft -->
     <mj-section background-color="#e0ebf9" border-bottom="1px dashed lightgrey">
       <mj-column width="30%">
-        <mj-image align="center" href="https://draft.dev/#write" src="https://drive.google.com/uc?id=1qlldMq884v-DGyQLVHMP7mM36ZEetXFX"></mj-image>
+        <mj-image align="center" href="https://draft.dev/write" src="https://drive.google.com/uc?id=1qlldMq884v-DGyQLVHMP7mM36ZEetXFX"></mj-image>
       </mj-column>
       <mj-column width="70%">
         <mj-text font-weight="bold" line-height="24px">
-          <a href="https://draft.dev/#write">Spread Your Expertise</a>
+          <a href="https://draft.dev/write">Calling Engineers Who Write</a>
         </mj-text>
         <mj-text color="#666666" font-size="16px" line-height="20px">
-          Draft.dev works with software engineers around the world to create blog posts and tutorials.
-          Raise your profile, work with professional editors, and make some extra money
-          on the side!
+          Draft.dev works with engineers who write code and prose to create educational content for readers around the world.
+          If you'd like to get paid to share your knowledge, apply today!
         </mj-text>
         <mj-text>
-          <a href="https://draft.dev/#write">Apply today →</a>
+          <a href="https://draft.dev/write">Apply today →</a>
         </mj-text>
         <mj-text align="right" font-size="12px" font-style="italic">Sponsor</mj-text>
       </mj-column>
