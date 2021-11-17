@@ -65,11 +65,10 @@ export const weeklyMjmlTemplate = `<mjml>
       </mj-column>
       <mj-column width="70%">
         <mj-text font-weight="bold" line-height="24px">
-          <a href="https://draft.dev/write">Calling Engineers Who Write</a>
+          <a href="https://draft.dev/write">Grow Your Expertise and Audience</a>
         </mj-text>
         <mj-text color="#666666" font-size="16px" line-height="20px">
-          Draft.dev works with engineers who write code and prose to create educational content for readers around the world.
-          If you'd like to get paid to share your knowledge, apply today!
+          Want to get paid to write for great engineering companies? Apply to join Draft.dev today!
         </mj-text>
         <mj-text>
           <a href="https://draft.dev/write">Apply today →</a>
